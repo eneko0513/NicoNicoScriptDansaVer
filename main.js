@@ -1935,7 +1935,7 @@ $('myTrcColor').onclick = function(){
 		flags = true; $('myTrcColor').value = "色確定";
 		//全レイヤーを一番下に(擬似的に非表示にする)
 		for(var i = 0; i < $('myTrcSel2').length; i++){
-      temp_zIndex = $("myTxt" + (i+1)).style.zIndex;
+      temp_zIndex[i] = $("myTxt" + (i+1)).style.zIndex;
 			$("myTxt" + (i+1)).style.zIndex = '0';
 		}
 	}else{
