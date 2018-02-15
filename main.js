@@ -1192,7 +1192,7 @@ $('myTransXD').onclick = function(){
 };
 
 /*----------------------------------------------------------------------------------------------------
-痴漢モード
+置換モード
 ----------------------------------------------------------------------------------------------------*/
 $('myTrcRepMode').onclick = function(){
 	if (myRep === false){
@@ -1897,7 +1897,7 @@ $('myCmdBoxIpt').onclick = function(){
 	a.value = z;
 }
 /*----------------------------------------------------------------------------------------------------
-[テキスト表示非表]
+[テキスト表示非表示]
 ----------------------------------------------------------------------------------------------------*/
 $('myTrcTxtDisp').onclick = function(){
 	if ($('myTrcSel2').value === "") {return;}
@@ -1928,19 +1928,22 @@ $('myTrcGrdDisp').onclick = function(){
 ----------------------------------------------------------------------------------------------------*/
 
 var flags = false;
+var temp_zIndex =[];
 $('myTrcColor').onclick = function(){
 
 	if(flags == false){
 		flags = true; $('myTrcColor').value = "色確定";
 		//全レイヤーを一番下に(擬似的に非表示にする)
 		for(var i = 0; i < $('myTrcSel2').length; i++){
+      temp_zIndex = $("myTxt" + (i+1)).style.zIndex;
 			$("myTxt" + (i+1)).style.zIndex = '0';
 		}
 	}else{
 		flags = false; $('myTrcColor').value = "色変更";
 		//全レイヤーを一番下に(擬似的に表示にする)
 		for(var i = 0; i < $('myTrcSel2').length; i++){
-			$("myTxt" + (i+1)).style.zIndex = '4';
+      $("myTxt" + (i+1)).style.zIndex = temp_zIndex[i];
+			//$("myTxt" + (i+1)).style.zIndex = '4';
 		}
 	}
 }
