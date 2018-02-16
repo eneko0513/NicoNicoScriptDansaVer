@@ -226,6 +226,7 @@ javascript: (function(f, dd) {
         '<option value="Small_Ue_Mincho_W24_L38">Small Ue 38</option>' +
         '<option value="Medium_Shita_Full_Mincho_W50_C22">Medium Shita W50</option>' +
         '<option value="Small_Shita_Full_Mincho_W37_L2_C9">Small Shita W37 L2</option>' +
+        '<option value="Small_Shita_Full_Mincho_W37_L2_C9">Small Ue W37 L2</option>' +
         '</select>' +
         '<input id="myTrcAdd" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="追加" />' +
         '<input id="myTrcUp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="上へ" />' +
