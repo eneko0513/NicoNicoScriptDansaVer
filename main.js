@@ -1080,6 +1080,20 @@ javascript: (function(f, dd) {
                 'transform: scale( 1.055 , 1.040);' ;
                 j++;
                 break;
+                case "small_ue_full_gothic_W37_L2_C9":
+                n = 2+(38.7 * (j));
+                myinnerTxt = myinnerTxt +
+                'height: 37px;' +
+                'font-family: "游ゴシック", SimHei, Arial, "ＭＳ Ｐゴシック", sans-serif;' +
+                'font-size: 16px;' +
+                'line-height: 17px;' +
+                'top:'+ n + 'px;' +
+                'left:7px;' +
+                'width:593px;' +
+                'transform-origin: 0 0;' +
+                'transform: scale( 1.055 , 1.040);' ;
+                j++;
+                break;
             }
             t.style.cssText = myinnerTxt;
             //t.style.color = "#" + parseInt($('myTxtR').value).toString(16).replace(/^[0-9A-F]$/, "0$&") + parseInt($('myTxtG').value).toString(16).replace(/^[0-9A-F]$/, "0$&") + parseInt($('myTxtB').value).toString(16).replace(/^[0-9A-F]$/, "0$&");
