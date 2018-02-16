@@ -1081,7 +1081,7 @@ javascript: (function(f, dd) {
                 'transform: scale( 1.055 , 1.040);' ;
                 j++;
                 break;
-                case "Small_ue_full_gothic_W37_L2_C9":
+                case "Small_Ue_Full_Gothic_W37_L2_C9":
                 n = 2+(38.7 * (j));
                 myinnerTxt = myinnerTxt +
                 'height: 37px;' +
