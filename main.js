@@ -1,4 +1,4 @@
-// 201802170226
+// 201802170245
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -215,18 +215,18 @@ javascript: (function(f, dd) {
         '</div>' +
         '<div style="padding:2px 0;">' +
         '<select id="myTrcSel" class="myCmd">' +
-        '<option value="Big_Ue_Ender_Full_Mincho_W17_L9">Big Ue Ender 9</option>' +
-        '<option value="Big_Shita_Ender_Full_Mincho_W17_L9">Big Shita Ender 9</option>' +
-        '<option value="Big_Ue_Full_Mincho_W34_L16">Big Ue 16</option>' +
-        '<option value="Medium_Ue_Ender_Full_Mincho_W24_L14">Medium Ue Ender 14</option>' +
-        '<option value="Medium_Shita_Ender_Full_Mincho_W24_L14">Medium Shita Ender 14</option>' +
-        '<option value="Medium_Ue_Full_Mincho_W40_L26">Medium Ue 26</option>' +
-        '<option value="Medium_Shita_Full_Mincho_W40_L26">Medium Shita 26</option>' +
-        '<option value="Small_Ue_Ender_Full_Mincho_W37_L21">Small Ue Ender 21</option>' +
-        '<option value="Small_Ue_Mincho_W24_L38">Small Ue 38</option>' +
-        '<option value="Medium_Shita_Full_Mincho_W50_C22">Medium Shita W50</option>' +
-        '<option value="Small_Shita_Full_Mincho_W37_L2_C9">Small Shita W37 L2</option>' +
-        '<option value="Small_Ue_Full_Gothic_W37_L2_C9">Small Ue W37 L2</option>' +
+        '<option value="big_ue_ender_full_mincho_W17_L9">Big Ue Ender 9</option>' +
+        '<option value="big_shita_ender_full_mincho_W17_L9">Big Shita Ender 9</option>' +
+        '<option value="big_ue_full_mincho_W34_L16">Big Ue 16</option>' +
+        '<option value="medium_ue_ender_full_mincho_W24_L14">Medium Ue Ender 14</option>' +
+        '<option value="medium_shita_ender_full_mincho_W24_L14">Medium Shita Ender 14</option>' +
+        '<option value="medium_ue_full_mincho_W40_L26">Medium Ue 26</option>' +
+        '<option value="medium_shita_full_mincho_W40_L26">Medium Shita 26</option>' +
+        '<option value="small_ue_ender_full_mincho_W37_L21">Small Ue Ender 21</option>' +
+        '<option value="small_ue_mincho_W24_L38">Small Ue 38</option>' +
+        '<option value="medium_shita_full_mincho_W50_C22">Medium Shita W50</option>' +
+        '<option value="small_ue_full_gothic_W37_L2_C9">Small Ue W37 L2</option>' +
+        '<option value="small_shita_full_mincho_W37_L2_C9">Small Shita W37 L2</option>' +
         '</select>' +
         '<input id="myTrcAdd" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="追加" />' +
         '<input id="myTrcUp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="上へ" />' +
@@ -945,7 +945,7 @@ javascript: (function(f, dd) {
             '0px -1px 0px rgba(0,0,0,0.2);' +
             '';
             switch ($('myTrcSel').value){
-                case "Big_Ue_Ender_Full_Mincho_W17_L9":
+                case "big_ue_ender_full_mincho_W17_L9":
                 myinnerTxt = myinnerTxt +
                 'height: 380px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -957,7 +957,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 1.000 , 1.010);' ;
                 break;
-                case "Big_Shita_Ender_Full_Mincho_W17_L9":
+                case "big_shita_ender_full_mincho_W17_L9":
                 myinnerTxt = myinnerTxt +
                 'height: 380px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -969,7 +969,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 1.000 , 1.010);' ;
                 break;
-                case "Big_Ue_Full_Mincho_W34_L16":
+                case "big_ue_full_mincho_W34_L16":
                 myinnerTxt = myinnerTxt +
                 'height: 370px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -981,7 +981,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 1.019 , 0.973);' ; //1.019/0.973
                 break;
-                case "Medium_Ue_Ender_Full_Mincho_W24_L14":
+                case "medium_ue_ender_full_mincho_W24_L14":
                 myinnerTxt = myinnerTxt +
                 'height: 380px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -993,7 +993,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 1.000 , 1.003);' ;
                 break;
-                case "Medium_Shita_Ender_Full_Mincho_W24_L14":
+                case "medium_shita_ender_full_mincho_W24_L14":
                 myinnerTxt = myinnerTxt +
                 'height: 380px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -1005,7 +1005,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 1.000 , 1.003);' ;
                 break;
-                case "Medium_Ue_Full_Mincho_W40_L26":
+                case "medium_ue_full_mincho_W40_L26":
                 myinnerTxt = myinnerTxt +
                 'height: 366px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -1017,7 +1017,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 0.938 , 1.006);' ;
                 break;
-                case "Medium_Shita_Full_Mincho_W40_L26":
+                case "medium_shita_full_mincho_W40_L26":
                 myinnerTxt = myinnerTxt +
                 'height: 366px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -1029,7 +1029,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 0.938 , 1.006);' ;
                 break;
-                case "Small_Ue_Ender_Full_Mincho_W37_L21":
+                case "small_ue_ender_full_mincho_W37_L21":
                 myinnerTxt = myinnerTxt +
                 'height: 338px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -1041,7 +1041,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 1.055 , 1.060);' ;
                 break;
-                case "Small_Ue_Mincho_W24_L38":
+                case "small_ue_mincho_W24_L38":
                 myinnerTxt = myinnerTxt +
                 'height: 382px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
@@ -1053,7 +1053,7 @@ javascript: (function(f, dd) {
                 'transform-origin: 0 0;' +
                 'transform: scale( 0.936 , 0.942);' ;
                 break;
-                case "Medium_Shita_Full_Mincho_W50_C22":
+                case "medium_shita_full_mincho_W50_C22":
                 n = 345-(16.2 * (j));
                 myinnerTxt = myinnerTxt +
                 'height: 16px;' +
@@ -1067,7 +1067,7 @@ javascript: (function(f, dd) {
                 'transform: scale( 0.952 , 1.000);' ;
                 j++;
                 break;
-                case "Small_Shita_Full_Mincho_W37_L2_C9":
+                case "small_shita_full_mincho_W37_L2_C9":
                 n = 324-(38.7 * (j));
                 myinnerTxt = myinnerTxt +
                 'height: 36px;' +
@@ -1081,7 +1081,7 @@ javascript: (function(f, dd) {
                 'transform: scale( 1.055 , 1.040);' ;
                 j++;
                 break;
-                case "Small_Ue_Full_Gothic_W37_L2_C9":
+                case "small_ue_full_gothic_W37_L2_C9":
                 n = 2+(38.7 * (j));
                 myinnerTxt = myinnerTxt +
                 'height: 37px;' +
