@@ -1,4 +1,4 @@
-// 201802170130
+// 201802170146
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -1071,6 +1071,20 @@ javascript: (function(f, dd) {
                 myinnerTxt = myinnerTxt +
                 'height: 36px;' +
                 'font-family: "游明朝", SimSun, Arial, "ＭＳ Ｐゴシック", "游ゴシック",serif;' +
+                'font-size: 16px;' +
+                'line-height: 17px;' +
+                'top:'+ n + 'px;' +
+                'left:7px;' +
+                'width:593px;' +
+                'transform-origin: 0 0;' +
+                'transform: scale( 1.055 , 1.040);' ;
+                j++;
+                break;
+                case "small_ue_full_gothic_W37_L2_C9":
+                n = 2+(38.7 * (j));
+                myinnerTxt = myinnerTxt +
+                'height: 37px;' +
+                'font-family: "游ゴシック", SimHei, Arial, "ＭＳ Ｐゴシック", sans-serif;' +
                 'font-size: 16px;' +
                 'line-height: 17px;' +
                 'top:'+ n + 'px;' +
