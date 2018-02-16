@@ -1,4 +1,4 @@
-// 201802170210
+// 201802170215
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -1081,7 +1081,7 @@ javascript: (function(f, dd) {
                 'transform: scale( 1.055 , 1.040);' ;
                 j++;
                 break;
-                case "small_ue_full_gothic_W37_L2_C9":
+                case "Small_ue_full_gothic_W37_L2_C9":
                 n = 2+(38.7 * (j));
                 myinnerTxt = myinnerTxt +
                 'height: 37px;' +
