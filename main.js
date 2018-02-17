@@ -28,7 +28,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = "スクリプトVer：" + "1.2.2.1\n" +// 大幅機能追加時は左の数値、機能追加は左から2つめ、バグ修正は右2つ目、一番右は誤字脱字レベル修正
+    var VersionInfo = "スクリプトVer：" + "1.2.2.2\n" +// 大幅機能追加時は左の数値、機能追加は左から2つめ、バグ修正は右2つ目、一番右は誤字脱字レベル修正
                       "更新内容：\n" +
                       "レイヤー一括表示,非表示機能追加"  // ここに説明
 
@@ -1972,14 +1972,14 @@ javascript: (function(f, dd) {
             //全レイヤーを一番下に(擬似的に非表示にする)
             for(var i = 0; i < $('myTrcSel2').length; i++){
                 $("myTxt" + (i+1)).style.zIndex = '0';
-                $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/○/g, "●")
+                $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/●/g, "○")
             }
         }else{
             flags_v= false; $('myTrcVisibleChange').value = "一括非表示";
             //全レイヤーを一番下に(擬似的に表示にする)
             for(var i = 0; i < $('myTrcSel2').length; i++){
                 $("myTxt" + (i+1)).style.zIndex = '4';
-                $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/○/g, "○")
+                $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/○/g, "●")
             }
         }
     }
