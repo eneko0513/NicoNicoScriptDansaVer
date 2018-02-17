@@ -600,6 +600,7 @@ javascript: (function(f, dd) {
     /*----------------------------------------------------------------------------------------------------
     [シークというかいまんとこタイマー]
     ----------------------------------------------------------------------------------------------------*/
+    /*
     $('mySeekVideo').onclick = function(){
         //ActionButton ControllerButton PlayerPlayButton
         //ActionButton ControllerButton PlayerPauseButton
@@ -608,14 +609,16 @@ javascript: (function(f, dd) {
         document.getElementsByClassName("PlayerPlayButton")[0].dispatchEvent(new MouseEvent("click",{"view":window,"bubbles":!0,"cancelable":!0}));
         setTimeout(function(){document.getElementsByClassName("PlayerPauseButton")[0].dispatchEvent(new MouseEvent("click",{"view":window,"bubbles":!0,"cancelable":!0}));},t);
     };
+
     /*----------------------------------------------------------------------------------------------------
     [改行置換とA0]
     ----------------------------------------------------------------------------------------------------*/
+    /*
     $('myBR').onclick = function(){
         var a = $("myTxtIpt").value.replace(/[\xA0]/gi,"[a0]");
         a = a.replace(/[\n]/g,"<br>");
         $("myTxtIpt").value = a;
-    }
+    */
     /*----------------------------------------------------------------------------------------------------
     [入力]
     ----------------------------------------------------------------------------------------------------*/
