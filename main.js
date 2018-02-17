@@ -22,13 +22,13 @@ javascript: (function(f, dd) {
     var myTimer
     myOnload();
 
-    var VersionInfo = new String("TEST");
+
     /*----------------------------------------------------------------------------------------------------
     [起動]
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-
+    var VersionInfo = new String("TEST");
 
         //プレイヤーサイズチェック
         console.log(document.body.className)
