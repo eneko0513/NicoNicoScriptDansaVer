@@ -1112,12 +1112,14 @@ javascript: (function(f, dd) {
         $('myTrcSel2')[m-1].selected= true;
 
         t.focus();
+        /*
         $('myFontSize').value = t.style.fontSize
         $('myLineHeight').value = parseInt(t.style.lineHeight);
         $('myTop').value = parseInt(t.style.top);
         $('myLeft').value = parseInt(t.style.left);
-        $('myTransX').value  = t.style.transform.match(/\d+\.*\d*/g)[0];
-        $('myTransY').value  = t.style.transform.match(/\d+\.*\d*/g)[1];
+        $('myTransX').value  = t.style.transform.match(/\d+\.*\d* /g)[0];   //コメントアウト外すときに /gの前の半角スペースを削ること
+        $('myTransY').value  = t.style.transform.match(/\d+\.*\d* /g)[1];   //コメントアウト外すときに /gの前の半角スペースを削ること
+        */
     };
     /*----------------------------------------------------------------------------------------------------
     調整
