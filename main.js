@@ -244,6 +244,10 @@ javascript: (function(f, dd) {
         '<div style="margin:10px; display: inline;"></div>' +
         '<input id="myTrcRepMode" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="置換M" />' +
         '</div>' +
+        '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
+        '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="色変更" />' +
+        '<label class="VideoUploadDateMeta-title">a' + VersionInfo + 'a</label>' +
+        '</div>' +
         '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
     //    '<div style="float:left;">' +
     //    '<div style="position:relative; padding:2px 0;">' +
@@ -275,10 +279,7 @@ javascript: (function(f, dd) {
     //    '<input id="myTransXU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="◀" />' +
     //    '<input id="myTransXD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▶" />' +
     //    '</div>' +
-        '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
-        '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="色変更" />' +
-        '<label class="VideoUploadDateMeta-title">a' + VersionInfo + 'a</label>' +
-        '</div>' +
+
         /*
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
         '<div style="background:#ddd; height:3px; border:1px inset #aaa; position:relative; top:16px; font-size:0px;"></div>' +
