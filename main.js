@@ -154,7 +154,7 @@ javascript: (function(f, dd) {
             b.style.display="none";
             a.innerHTML = '[ + ]Main';
         }
-        */
+        
         //ボックス
         var c = document.createElement('div');
         c.id = 'myEmtBox';
