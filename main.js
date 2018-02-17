@@ -184,7 +184,7 @@ javascript: (function(f, dd) {
         '<div style="margin:50px; display: inline;"></div>' +
         '<input id="myCmdBoxC" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="クリア" />' +
         '<div style="margin:20px; display: inline;"></div>' +
-        '<input id="myCmdBoxIpt" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤ読込" />' +
+        '<input id="myCmdBoxIpt" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤー読込" />' +
         '</div>' +
         '';
         c.after(d);
@@ -232,11 +232,11 @@ javascript: (function(f, dd) {
         '<option value="small_ue_full_gothic_W37_L2_C9">Small Ue W37 L2</option>' +
         '<option value="small_shita_full_mincho_W37_L2_C9">Small Shita W37 L2</option>' +
         '</select>' +
-        '<input id="myTrcAdd" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤー：追加" />' +
-        '<input id="myTrcUp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤー：上へ" />' +
-        '<input id="myTrcDw" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤー：下へ" />' +
-        '<input id="myTrcTxtDisp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="選択レイヤー：非表示" />' +
-        '<input id="myTrcDel" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="選択レイヤー：削除" />' +
+        '<input id="myTrcAdd" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="追加" />' +
+        '<input id="myTrcUp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="上へ" />' +
+        '<input id="myTrcDw" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="下へ" />' +
+        '<input id="myTrcTxtDisp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="非表示" />' +
+        '<input id="myTrcDel" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="削除" />' +
         '<div style="margin:10px; display: inline;"></div>' +
     //    '<input id="myTrcGrdDisp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="グリッド" />' +
         '<div style="margin:10px; display: inline;"></div>' +
@@ -248,7 +248,7 @@ javascript: (function(f, dd) {
         '<input id="myTrcRepMode" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="置換モード" />' +
         '</div>' +
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
-        '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="選択レイヤー：文字色変更" />' +
+        '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
         '</div>' +
         '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
     //    '<div style="float:left;">' +
