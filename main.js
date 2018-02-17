@@ -38,7 +38,7 @@ javascript: (function(f, dd) {
         var n = document.getElementsByClassName('MainContainer')[0];
         var v = document.getElementsByClassName('VideoPlayer')[0];
         //メイン
-        /*
+
         var a = document.createElement('div');
         a.id = 'myEmtMain';
         a.innerHTML = '[ - ]Main';
@@ -49,7 +49,7 @@ javascript: (function(f, dd) {
         var b = document.createElement("div");
         b.id = "myEmtMainSub";
         b.innerHTML = '' +
-        '<div style = "padding:2px 0;">' +
+    //    '<div style = "padding:2px 0;">' +
     //    '<input id="myCmdClear" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="Del" />' +
     //    '<div style="margin:10px; display: inline;"></div>' +
     //    '<input id="myCmdWhite" class="myCmdC" type="button" value=" " style="background-color:#FFFFFF;" />' +
@@ -110,7 +110,7 @@ javascript: (function(f, dd) {
     //    '<input id="mySeekVideo" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="実行" />' +
     //    '<div style="margin:10px; display: inline;"></div>' +
     //    '<input id="myBR" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="<BR>" />' +
-        '</div>';
+    //    '</div>';
         a.after(b);
         myCSSSub(b);
     //    $("myCmdClear").addEventListener("click" , function(){myCmdClick(20,"");} , false);
