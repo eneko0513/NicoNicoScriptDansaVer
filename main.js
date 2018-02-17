@@ -28,9 +28,9 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = "スクリプトVer：" + "1.1.1.1\n" +// 大幅機能追加時は左の数値、機能追加は左から2つめ、バグ修正は右2つ目、一番右は誤字脱字レベル修正
+    var VersionInfo = "スクリプトVer：" + "1.2.0.0\n" +// 大幅機能追加時は左の数値、機能追加は左から2つめ、バグ修正は右2つ目、一番右は誤字脱字レベル修正
                       "更新内容：\n" +
-                      "・Main欄を非表示\n・Traceエリア右側を非表示\n・レイアウト変更\n・バージョン情報，更新情報欄を追加"  // ここに説明
+                      "レイヤー一括表示,非表示機能追加"  // ここに説明
 
         //プレイヤーサイズチェック
         console.log(document.body.className)
@@ -214,8 +214,8 @@ javascript: (function(f, dd) {
         '<input id="myTxtExpOne" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="選択出力" />' +
         '<input id="myTxtTabMode" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="TabM" />' +
         '<label class="VideoUploadDateMeta-title">画面サイズ</label>' +
-        '<input id="myVideoSizeM" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="中" />' +
-        '<input id="myVideoSizeL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="大" />' +
+        '<input id="myVideoSizeM" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="中画面" />' +
+        '<input id="myVideoSizeL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="大画面" />' +
         '</div>' +
         '<div style="padding:2px 0;">' +
         '<select id="myTrcSel" class="myCmd">' +
@@ -249,6 +249,7 @@ javascript: (function(f, dd) {
         '</div>' +
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
         '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
+        '<input id="myTrcVisibleChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="一括非表示" />' +
         '</div>' +
         '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
     //    '<div style="float:left;">' +
@@ -1956,10 +1957,33 @@ javascript: (function(f, dd) {
             $('myGrd').style.display = "";
         }
     };
+
+
+
+    /*----------------------------------------------------------------------------------------------------
+    [レイヤーを一括表示/非表示をする処理]
+    ----------------------------------------------------------------------------------------------------*/
+    var flags_v = false;
+    $('myTrcVisibleChange').onclick = function(){
+
+        if(flags_v== false){
+            flags_v= true; $('myTrcVisibleChange').value = "一括表示";
+            //全レイヤーを一番下に(擬似的に非表示にする)
+            for(var i = 0; i < $('myTrcSel2').length; i++){
+                $("myTxt" + (i+1)).style.zIndex = '0';
+            }
+        }else{
+            flags_v= false; $('myTrcVisibleChange').value = "一括非表示";
+            //全レイヤーを一番下に(擬似的に表示にする)
+            for(var i = 0; i < $('myTrcSel2').length; i++){
+                $("myTxt" + (i+1)).style.zIndex = '4';
+            }
+        }
+    }
+
     /*----------------------------------------------------------------------------------------------------
     [スライダーの代わりの画像から色データを取得する処理]
     ----------------------------------------------------------------------------------------------------*/
-
     var flags = false;
     var temp_zIndex =[];
     $('myTrcColor').onclick = function(){
