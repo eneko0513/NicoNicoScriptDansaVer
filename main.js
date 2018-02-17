@@ -246,7 +246,7 @@ javascript: (function(f, dd) {
         '</div>' +
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
         '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="色変更" />' +
-        '<font color="red"><label class="VideoUploadDateMeta-title">' + VersionInfo + '</label></font>' +
+        '<label class="VideoUploadDateMeta-title"><font color="red">' + VersionInfo + '</font></label>' +
         '</div>' +
         '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
     //    '<div style="float:left;">' +
