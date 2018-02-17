@@ -1,4 +1,4 @@
-// 201802170245
+// 201802171211
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -46,66 +46,66 @@ javascript: (function(f, dd) {
         b.id = "myEmtMainSub";
         b.innerHTML = '' +
         '<div style = "padding:2px 0;">' +
-        '<input id="myCmdClear" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="Del" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdWhite" class="myCmdC" type="button" value=" " style="background-color:#FFFFFF;" />' +
-        '<input id="myCmdRed" class="myCmdC" type="button" value=" " style="background-color:#FF0000;" />' +
-        '<input id="myCmdPink" class="myCmdC" type="button" value=" " style="background-color:#FF8080;" />' +
-        '<input id="myCmdOrange" class="myCmdC" type="button" value=" " style="background-color:#FFC000;" />' +
-        '<input id="myCmdYellow" class="myCmdC" type="button" value=" " style="background-color:#FFFF00;" />' +
-        '<input id="myCmdGreen" class="myCmdC" type="button" value=" " style="background-color:#00FF00;" />' +
-        '<input id="myCmdCyan" class="myCmdC" type="button" value=" " style="background-color:#00FFFF;" />' +
-        '<input id="myCmdBlue" class="myCmdC" type="button" value=" " style="background-color:#0000FF;" />' +
-        '<input id="myCmdPurple" class="myCmdC" type="button" value=" " style="background-color:#C000FF;" />' +
-        '<input id="myCmdBlack" class="myCmdC" type="button" value=" " style="background-color:#000000;" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdWhite2" class="myCmdC" type="button" value=" " style="background-color:#CCCC99;" />' +
-        '<input id="myCmdRed2" class="myCmdC" type="button" value=" " style="background-color:#CC0033;" />' +
-        '<input id="myCmdPink2" class="myCmdC" type="button" value=" " style="background-color:#FF33CC;" />' +
-        '<input id="myCmdOrange2" class="myCmdC" type="button" value=" " style="background-color:#FF6600;" />' +
-        '<input id="myCmdYellow2" class="myCmdC" type="button" value=" " style="background-color:#999900;" />' +
-        '<input id="myCmdGreen2" class="myCmdC" type="button" value=" " style="background-color:#00CC66;" />' +
-        '<input id="myCmdCyan2" class="myCmdC" type="button" value=" " style="background-color:#00CCCC;" />' +
-        '<input id="myCmdBlue2" class="myCmdC" type="button" value=" " style="background-color:#3399FF;" />' +
-        '<input id="myCmdPurple2" class="myCmdC" type="button" value=" " style="background-color:#6633CC;" />' +
-        '<input id="myCmdBlack2" class="myCmdC" type="button" value=" " style="background-color:#666666;" />' +
-        '</div>' +
-        '<div style = "padding:2px 0;">' +
-        '<input id="myCmdBig" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="B" />' +
-        '<input id="myCmdMedium" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="M" />' +
-        '<input id="myCmdSmall" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="S" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdUe" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="U" />' +
-        '<input id="myCmdNaka" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="N" />' +
-        '<input id="myCmdShita" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="S" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdDefont" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="D" />' +
-        '<input id="myCmdGothic" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="G" />' +
-        '<input id="myCmdMincho" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="M" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdEnder" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="end" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdFull" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="full" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdPatissier" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="pts" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdSage" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="sage" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmdIyayo" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="184" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myInvisible" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="Inv" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myCmtClear" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="Cdel" />' +
-        '</div>' +
-        '<div style = "padding:2px 0;">' +
-        '<SELECT id="mySeekMode" disabled class="ActionButton TagEnterEditingButton TagContainer-editButton" SIZE=1>' +
-        '<option value="1" "selected">Timer' +
-        '<option value="2">Seek' +
-        '</SELECT>' +
-        '<input id="mySeekTime" class="myCmd" type="text" size=2 value="1000" /><label for="mySeekTime" class="VideoUploadDateMeta-title">秒/1000</label>' +
-        '<input id="mySeekVideo" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="実行" />' +
-        '<div style="margin:10px; display: inline;"></div>' +
-        '<input id="myBR" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="<BR>" />' +
+    //    '<input id="myCmdClear" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="Del" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdWhite" class="myCmdC" type="button" value=" " style="background-color:#FFFFFF;" />' +
+    //    '<input id="myCmdRed" class="myCmdC" type="button" value=" " style="background-color:#FF0000;" />' +
+    //    '<input id="myCmdPink" class="myCmdC" type="button" value=" " style="background-color:#FF8080;" />' +
+    //    '<input id="myCmdOrange" class="myCmdC" type="button" value=" " style="background-color:#FFC000;" />' +
+    //    '<input id="myCmdYellow" class="myCmdC" type="button" value=" " style="background-color:#FFFF00;" />' +
+    //    '<input id="myCmdGreen" class="myCmdC" type="button" value=" " style="background-color:#00FF00;" />' +
+    //    '<input id="myCmdCyan" class="myCmdC" type="button" value=" " style="background-color:#00FFFF;" />' +
+    //    '<input id="myCmdBlue" class="myCmdC" type="button" value=" " style="background-color:#0000FF;" />' +
+    //    '<input id="myCmdPurple" class="myCmdC" type="button" value=" " style="background-color:#C000FF;" />' +
+    //    '<input id="myCmdBlack" class="myCmdC" type="button" value=" " style="background-color:#000000;" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdWhite2" class="myCmdC" type="button" value=" " style="background-color:#CCCC99;" />' +
+    //    '<input id="myCmdRed2" class="myCmdC" type="button" value=" " style="background-color:#CC0033;" />' +
+    //    '<input id="myCmdPink2" class="myCmdC" type="button" value=" " style="background-color:#FF33CC;" />' +
+    //    '<input id="myCmdOrange2" class="myCmdC" type="button" value=" " style="background-color:#FF6600;" />' +
+    //    '<input id="myCmdYellow2" class="myCmdC" type="button" value=" " style="background-color:#999900;" />' +
+    //    '<input id="myCmdGreen2" class="myCmdC" type="button" value=" " style="background-color:#00CC66;" />' +
+    //    '<input id="myCmdCyan2" class="myCmdC" type="button" value=" " style="background-color:#00CCCC;" />' +
+    //    '<input id="myCmdBlue2" class="myCmdC" type="button" value=" " style="background-color:#3399FF;" />' +
+    //    '<input id="myCmdPurple2" class="myCmdC" type="button" value=" " style="background-color:#6633CC;" />' +
+    //    '<input id="myCmdBlack2" class="myCmdC" type="button" value=" " style="background-color:#666666;" />' +
+    //    '</div>' +
+    //    '<div style = "padding:2px 0;">' +
+    //    '<input id="myCmdBig" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="B" />' +
+    //    '<input id="myCmdMedium" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="M" />' +
+    //    '<input id="myCmdSmall" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="S" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdUe" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="U" />' +
+    //    '<input id="myCmdNaka" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="N" />' +
+    //    '<input id="myCmdShita" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="S" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdDefont" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="D" />' +
+    //    '<input id="myCmdGothic" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="G" />' +
+    //    '<input id="myCmdMincho" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="M" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdEnder" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="end" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdFull" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="full" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdPatissier" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="pts" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdSage" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="sage" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmdIyayo" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="184" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myInvisible" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="Inv" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myCmtClear" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="Cdel" />' +
+    //    '</div>' +
+    //    '<div style = "padding:2px 0;">' +
+    //    '<SELECT id="mySeekMode" disabled class="ActionButton TagEnterEditingButton TagContainer-editButton" SIZE=1>' +
+    //    '<option value="1" "selected">Timer' +
+    //    '<option value="2">Seek' +
+    //    '</SELECT>' +
+    //    '<input id="mySeekTime" class="myCmd" type="text" size=2 value="1000" /><label for="mySeekTime" class="VideoUploadDateMeta-title">秒/1000</label>' +
+    //    '<input id="mySeekVideo" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="実行" />' +
+    //    '<div style="margin:10px; display: inline;"></div>' +
+    //    '<input id="myBR" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="<BR>" />' +
         '</div>';
         a.after(b);
         myCSSSub(b);
