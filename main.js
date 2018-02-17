@@ -1972,14 +1972,14 @@ javascript: (function(f, dd) {
             //全レイヤーを一番下に(擬似的に非表示にする)
             for(var i = 0; i < $('myTrcSel2').length; i++){
                 $("myTxt" + (i+1)).style.zIndex = '0';
-                $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/●/g, "○")
+                //$('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/●/g, "○")
             }
         }else{
             flags_v= false; $('myTrcVisibleChange').value = "一括非表示";
             //全レイヤーを一番下に(擬似的に表示にする)
             for(var i = 0; i < $('myTrcSel2').length; i++){
                 $("myTxt" + (i+1)).style.zIndex = '4';
-                $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/○/g, "●")
+                //$('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text.replace(/○/g, "●")
             }
         }
     }
