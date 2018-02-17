@@ -22,6 +22,20 @@ javascript: (function(f, dd) {
     var myTimer
     myOnload();
 
+
+    //上部トレーサー部にバージョン情報を追記する領域を作成
+    var g = document.createElement('div');
+    g.id = 'VersionInfo';
+    g.innerHTML = 'VersionInfo';
+    g.addEventListener('click', function(){myEmtHeadClick(g);}, false);
+    n.before(g);
+    myCSSMain(g);
+    //トレ中身
+    var h = document.createElement('div');
+    h.id = 'myEmtTraceSub';
+    h.innerHTML = 'a';
+
+
     /*----------------------------------------------------------------------------------------------------
     [起動]
     ----------------------------------------------------------------------------------------------------*/
