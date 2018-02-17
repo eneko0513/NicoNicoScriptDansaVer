@@ -22,7 +22,7 @@ javascript: (function(f, dd) {
     var myTimer
     myOnload();
 
-    var VersionInfo = "TEST";
+    String VersionInfo = "TEST";
     /*----------------------------------------------------------------------------------------------------
     [起動]
     ----------------------------------------------------------------------------------------------------*/
@@ -244,7 +244,7 @@ javascript: (function(f, dd) {
         '<div style="margin:10px; display: inline;"></div>' +
         '<input id="myTrcRepMode" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="置換M" />' +
         '</div>' +
-    //    '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
+        '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
     //    '<div style="float:left;">' +
     //    '<div style="position:relative; padding:2px 0;">' +
     //    '<label class="VideoUploadDateMeta-title">FONT SIZE</label>' +
