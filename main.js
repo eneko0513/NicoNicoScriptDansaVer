@@ -1245,13 +1245,16 @@ javascript: (function(f, dd) {
         $('slider6').style.left = (a.style.color.match(/\d+/g)[2] - $('slider6').clientWidth/2) + 'px';
         $('myTxtB').value = a.style.color.match(/\d+/g)[2];
         */
-        $('myFontSize').value = a.style.fontSize.match(/\d+\.*\d*/g)[0];
-        $('myLineHeight').value = parseInt(a.style.lineHeight);
-        $('myTop').value = parseInt(a.style.top);
-        $('myLeft').value = parseInt(a.style.left);
-        $('myTransX').value  = a.style.transform.match(/\d+\.*\d*/g)[0];
-        $('myTransY').value  = a.style.transform.match(/\d+\.*\d*/g)[1];
 
+        /* 0217に非表示に、↑のブロックは元から非表示だったから触らないで
+        //$('myFontSize').value = a.style.fontSize.match(/\d+\.*\d*/g)[0];
+        //$('myLineHeight').value = parseInt(a.style.lineHeight);
+        //$('myTop').value = parseInt(a.style.top);
+        //$('myLeft').value = parseInt(a.style.left);
+        //$('myTransX').value  = a.style.transform.match(/\d+\.*\d*/g)[0];
+        //$('myTransY').value  = a.style.transform.match(/\d+\.*\d*/g)[1];
+
+        /*
         for(var i = 0; i < $('myTrcSel2').length; i++){
             if($("myTxt" + (i+1)).style.zIndex == '4'){
                 $("myTxt" + (i+1)).style.zIndex = '3';
@@ -1266,6 +1269,9 @@ javascript: (function(f, dd) {
         }
 
         $('myTrcSel2')[a.id.slice(5)-1].selected= true;
+
+        */
+
     }
     /*----------------------------------------------------------------------------------------------------
     Tabモード
