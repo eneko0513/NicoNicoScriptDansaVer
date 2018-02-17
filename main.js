@@ -1253,15 +1253,15 @@ javascript: (function(f, dd) {
         $('myTxtB').value = a.style.color.match(/\d+/g)[2];
         */
 
-        /* 0217に非表示に、↑のブロックは元から非表示だったから触らないで
-        //$('myFontSize').value = a.style.fontSize.match(/\d+\.*\d* /g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
-        //$('myLineHeight').value = parseInt(a.style.lineHeight);
-        //$('myTop').value = parseInt(a.style.top);
-        //$('myLeft').value = parseInt(a.style.left);
-        //$('myTransX').value  = a.style.transform.match(/\d+\.*\d* /g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
-        //$('myTransY').value  = a.style.transform.match(/\d+\.*\d* /g)[1]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        // 0217に非表示に、↑のブロックは元から非表示だったから触らないで
+        $('myFontSize').value = a.style.fontSize.match(/\d+\.*\d* /g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        $('myLineHeight').value = parseInt(a.style.lineHeight);
+        $('myTop').value = parseInt(a.style.top);
+        $('myLeft').value = parseInt(a.style.left);
+        $('myTransX').value  = a.style.transform.match(/\d+\.*\d*/g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        $('myTransY').value  = a.style.transform.match(/\d+\.*\d*/g)[1]; //コメントアウト外す時に /gの前の半角スペースを削ること
 
-        /*
+
         for(var i = 0; i < $('myTrcSel2').length; i++){
             if($("myTxt" + (i+1)).style.zIndex == '4'){
                 $("myTxt" + (i+1)).style.zIndex = '3';
@@ -1277,7 +1277,7 @@ javascript: (function(f, dd) {
 
         $('myTrcSel2')[a.id.slice(5)-1].selected= true;
 
-        */
+
 
     }
     /*----------------------------------------------------------------------------------------------------
