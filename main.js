@@ -22,20 +22,7 @@ javascript: (function(f, dd) {
     var myTimer
     myOnload();
 
-
-    //上部トレーサー部にバージョン情報を追記する領域を作成
-    var g = document.createElement('div');
-    g.id = 'VersionInfo';
-    g.innerHTML = 'VersionInfo';
-    g.addEventListener('click', function(){myEmtHeadClick(g);}, false);
-    n.before(g);
-    myCSSMain(g);
-    //トレ中身
-    var h = document.createElement('div');
-    h.id = 'myEmtTraceSub';
-    h.innerHTML = 'a';
-
-
+    var VersionInfo = "TEST";
     /*----------------------------------------------------------------------------------------------------
     [起動]
     ----------------------------------------------------------------------------------------------------*/
@@ -257,39 +244,40 @@ javascript: (function(f, dd) {
         '<div style="margin:10px; display: inline;"></div>' +
         '<input id="myTrcRepMode" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="置換M" />' +
         '</div>' +
-        '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
-        '<div style="float:left;">' +
-        '<div style="position:relative; padding:2px 0;">' +
-        '<label class="VideoUploadDateMeta-title">FONT SIZE</label>' +
-        '<input id="myFontSize" class="myCmd" type="text" value="0" style="width: 50px;">' +
-        '<input id="myFontSizeU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
-        '<input id="myFontSizeD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
-        '<label class="VideoUploadDateMeta-title">LINE HEIGHT</label>' +
-        '<input id="myLineHeight" class="myCmd" type="text" value="0" style="width: 50px;">' +
-        '<input id="myLineHeightU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
-        '<input id="myLineHeightD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
-        '</div>' +
-        '<div style="position:relative; padding:2px 0;">' +
-        '<label class="VideoUploadDateMeta-title">TOP</label>' +
-        '<input id="myTop" class="myCmd" type="text" value="0" style="width: 50px;">' +
-        '<input id="myTopU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
-        '<input id="myTopD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
-        '<label class="VideoUploadDateMeta-title">LEFT</label>' +
-        '<input id="myLeft" class="myCmd" type="text" value="0" style="width: 50px;">' +
-        '<input id="myLeftL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="◀" />' +
-        '<input id="myLeftR" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▶" />' +
-        '</div>' +
-        '<div style="position:relative; padding:2px 0;">' +
-        '<label class="VideoUploadDateMeta-title">transform</label>' +
-        '<input id="myTransY" class="myCmd" type="text" value="0" style="width: 50px;">' +
-        '<input id="myTransYU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
-        '<input id="myTransYD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
-        '<input id="myTransX" class="myCmd" type="text" value="0" style="width: 50px;">' +
-        '<input id="myTransXU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="◀" />' +
-        '<input id="myTransXD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▶" />' +
-        '</div>' +
+    //    '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
+    //    '<div style="float:left;">' +
+    //    '<div style="position:relative; padding:2px 0;">' +
+    //    '<label class="VideoUploadDateMeta-title">FONT SIZE</label>' +
+    //    '<input id="myFontSize" class="myCmd" type="text" value="0" style="width: 50px;">' +
+    //    '<input id="myFontSizeU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
+    //    '<input id="myFontSizeD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
+    //    '<label class="VideoUploadDateMeta-title">LINE HEIGHT</label>' +
+    //    '<input id="myLineHeight" class="myCmd" type="text" value="0" style="width: 50px;">' +
+    //    '<input id="myLineHeightU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
+    //    '<input id="myLineHeightD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
+    //    '</div>' +
+    //    '<div style="position:relative; padding:2px 0;">' +
+    //    '<label class="VideoUploadDateMeta-title">TOP</label>' +
+    //    '<input id="myTop" class="myCmd" type="text" value="0" style="width: 50px;">' +
+    //    '<input id="myTopU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
+    //    '<input id="myTopD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
+    //    '<label class="VideoUploadDateMeta-title">LEFT</label>' +
+    //    '<input id="myLeft" class="myCmd" type="text" value="0" style="width: 50px;">' +
+    //    '<input id="myLeftL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="◀" />' +
+    //    '<input id="myLeftR" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▶" />' +
+    //    '</div>' +
+    //    '<div style="position:relative; padding:2px 0;">' +
+    //    '<label class="VideoUploadDateMeta-title">transform</label>' +
+    //    '<input id="myTransY" class="myCmd" type="text" value="0" style="width: 50px;">' +
+    //    '<input id="myTransYU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▲" />' +
+    //    '<input id="myTransYD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▼" />' +
+    //    '<input id="myTransX" class="myCmd" type="text" value="0" style="width: 50px;">' +
+    //    '<input id="myTransXU" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="◀" />' +
+    //    '<input id="myTransXD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▶" />' +
+    //    '</div>' +
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
         '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="色変更" />' +
+        '<label class="VideoUploadDateMeta-title">' + VersionInfo + '</label>' +
         '</div>' +
         /*
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
