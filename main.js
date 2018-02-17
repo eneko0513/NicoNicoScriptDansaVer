@@ -36,6 +36,7 @@ javascript: (function(f, dd) {
         var n = document.getElementsByClassName('MainContainer')[0];
         var v = document.getElementsByClassName('VideoPlayer')[0];
         //メイン
+        /*
         var a = document.createElement('div');
         a.id = 'myEmtMain';
         a.innerHTML = '[ - ]Main';
@@ -151,7 +152,7 @@ javascript: (function(f, dd) {
             b.style.display="none";
             a.innerHTML = '[ + ]Main';
         }
-
+        */
         //ボックス
         var c = document.createElement('div');
         c.id = 'myEmtBox';
