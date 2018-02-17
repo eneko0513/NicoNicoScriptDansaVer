@@ -28,7 +28,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = new String("TEST");
+    //var VersionInfo = new String("TEST");
 
         //プレイヤーサイズチェック
         console.log(document.body.className)
@@ -298,7 +298,7 @@ javascript: (function(f, dd) {
         '<input id="myTxtB" disabled class="myCmd" type="text" value="0" style="position:absolute; left:280px; width: 50px;">' +
         '</div>' +
         */
-        '</div>' +
+    //    '</div>' +
         '<div style = "clear:both;"></div>' +
         '';
 
