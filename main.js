@@ -28,7 +28,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = "test";
+    var VersionInfo = "Ver.1.0.0.0";
 
         //プレイヤーサイズチェック
         console.log(document.body.className)
@@ -246,7 +246,7 @@ javascript: (function(f, dd) {
         '</div>' +
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
         '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="色変更" />' +
-        '<label class="VideoUploadDateMeta-title">a' + VersionInfo + 'a</label>' +
+        '<font color="red"><label class="VideoUploadDateMeta-title">' + VersionInfo + '</label></font>' +
         '</div>' +
         '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
     //    '<div style="float:left;">' +
