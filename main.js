@@ -380,6 +380,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myCSSMain(a){
         a.style.cssText = '' +
+        'width: 85px;' + 
         'font-size:13px;' +
         'color:#FFFFFF;' +
         'text-align:left;' +
