@@ -415,7 +415,7 @@ javascript: (function(f, dd) {
         switch(a.type){
             case 'button':
             b = b + '' +
-            'width: 85px' + 
+            'width: auto' +
             'cursor:pointer;' +
             'background-color:#999999;' +
             'color:#FFFFFF;' +
@@ -431,7 +431,7 @@ javascript: (function(f, dd) {
     function myCSSCmdChk(a){
         //チェック用
         var b = '' +
-        'width: 85px;' +
+        'width: auto;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
@@ -450,7 +450,7 @@ javascript: (function(f, dd) {
     function myCSSCmdC(a){
         //色な
         var b = '' +
-        'width: 85px;' +
+        'width: auto;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
@@ -466,7 +466,7 @@ javascript: (function(f, dd) {
     }
     function myCSSLvl(emt){
         emt.style.cssText = '' +
-        'width: 85px;' +
+        'width: auto;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'background-color:#999999;' +
