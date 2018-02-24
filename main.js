@@ -304,7 +304,7 @@ javascript: (function(f, dd) {
         */
         '</div>' +
         '<div style = "clear:both;"></div>' +
-        '<div><p class="VideoUploadDateMeta-title"><font color="red">バージョン：' + VersionInfo + '</font></p><p>更新概要：' + VersionDescript + '</p></div>';
+        '<div><p class="VideoUploadDateMeta-title"><font color="red">バージョン：' + VersionInfo + '</font></p><p>  更新概要：' + VersionDescript + '</p></div>';
         '';
 
         e.after(f);
