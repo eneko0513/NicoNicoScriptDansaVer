@@ -408,7 +408,7 @@ javascript: (function(f, dd) {
         'padding:4px 8px;' +
         'border-radius: 12px;' +
         'text-align: center;' +
-        'font-size: 13px;' +
+        'font-size: 11px;' +
         'border:none;' +
         'margin:0;' +
         '';
