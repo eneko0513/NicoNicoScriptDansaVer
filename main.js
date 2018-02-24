@@ -28,7 +28,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = "スクリプトVer：" + "1.2.2.4\n" +// 大幅機能追加時は左の数値、機能追加は左から2つめ、バグ修正は右2つ目、一番右は誤字脱字レベル修正
+    var VersionInfo = "スクリプトVer：" + "1.2.2.3\n" +// 大幅機能追加時は左の数値、機能追加は左から2つめ、バグ修正は右2つ目、一番右は誤字脱字レベル修正
                       "更新内容：\n" +
                       "レイヤー一括表示,非表示機能追加"  // ここに説明
 
@@ -1255,12 +1255,12 @@ javascript: (function(f, dd) {
         */
 
         // 0217に非表示に、↑のブロックは元から非表示だったから触らないで
-        //$('myFontSize').value = a.style.fontSize.match(/\d+\.*\d* /g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
-        //$('myLineHeight').value = parseInt(a.style.lineHeight);
-        //$('myTop').value = parseInt(a.style.top);
-        //$('myLeft').value = parseInt(a.style.left);
-        //$('myTransX').value  = a.style.transform.match(/\d+\.*\d*/g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
-        //$('myTransY').value  = a.style.transform.match(/\d+\.*\d*/g)[1]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        $('myFontSize').value = a.style.fontSize.match(/\d+\.*\d* /g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        $('myLineHeight').value = parseInt(a.style.lineHeight);
+        $('myTop').value = parseInt(a.style.top);
+        $('myLeft').value = parseInt(a.style.left);
+        $('myTransX').value  = a.style.transform.match(/\d+\.*\d*/g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        $('myTransY').value  = a.style.transform.match(/\d+\.*\d*/g)[1]; //コメントアウト外す時に /gの前の半角スペースを削ること
 
 
         for(var i = 0; i < $('myTrcSel2').length; i++){
