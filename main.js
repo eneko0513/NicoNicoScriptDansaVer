@@ -455,7 +455,7 @@ javascript: (function(f, dd) {
         'padding:4px 8px;' +
         'border-radius: 12px;' +
         'text-align: center;' +
-        'font-size: 13px;' +
+        'font-size: 11px;' +
         'border:solid;' +
         'border-width:2px;' +
         'border-color:#999999;' +
@@ -473,7 +473,7 @@ javascript: (function(f, dd) {
         'border-radius: 12px;' +
         'text-align: center;' +
         'color:#FFFFFF;' +
-        'font-size: 13px;' +
+        'font-size: 11px;' +
         'border:none;' +
         'line-height:0' +
         'cursor:pointer;' +
