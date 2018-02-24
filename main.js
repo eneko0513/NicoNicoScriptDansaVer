@@ -28,7 +28,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = "1.2.2.4";    // Ver情報
+    var VersionInfo = "1.2.2.5";    // Ver情報
     var VersionDescript = "aa";     // 更新内容概要
 
         //プレイヤーサイズチェック
