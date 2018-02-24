@@ -380,7 +380,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myCSSMain(a){
         a.style.cssText = '' +
-        'font-size:11px;' +
+        'font-size:13px;' +
         'color:#FFFFFF;' +
         'text-align:left;' +
         'background-color:#333333;' +
@@ -403,12 +403,12 @@ javascript: (function(f, dd) {
     }
     function myCSSCmd(a){
         var b = '' +
-        //'width: 85px;' +
-        //'height: 24px;' +
+        'width: 85px;' +
+        'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
         'text-align: center;' +
-        'font-size: 13px;' +
+        'font-size: 11px;' +
         'border:none;' +
         'margin:0;' +
         '';
