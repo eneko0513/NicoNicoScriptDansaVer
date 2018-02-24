@@ -1256,12 +1256,12 @@ javascript: (function(f, dd) {
         */
 
         // 0217に非表示に、↑のブロックは元から非表示だったから触らないで
-        $('myFontSize').value = a.style.fontSize.match(/\d+\.*\d*/g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
-        $('myLineHeight').value = parseInt(a.style.lineHeight);
-        $('myTop').value = parseInt(a.style.top);
-        $('myLeft').value = parseInt(a.style.left);
-        $('myTransX').value  = a.style.transform.match(/\d+\.*\d*/g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
-        $('myTransY').value  = a.style.transform.match(/\d+\.*\d*/g)[1]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        //$('myFontSize').value = a.style.fontSize.match(/\d+\.*\d*/g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        //$('myLineHeight').value = parseInt(a.style.lineHeight);
+        //$('myTop').value = parseInt(a.style.top);
+        //$('myLeft').value = parseInt(a.style.left);
+        //$('myTransX').value  = a.style.transform.match(/\d+\.*\d*/g)[0]; //コメントアウト外す時に /gの前の半角スペースを削ること
+        //$('myTransY').value  = a.style.transform.match(/\d+\.*\d*/g)[1]; //コメントアウト外す時に /gの前の半角スペースを削ること
 
 
         for(var i = 0; i < $('myTrcSel2').length; i++){
