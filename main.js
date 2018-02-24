@@ -403,8 +403,8 @@ javascript: (function(f, dd) {
     }
     function myCSSCmd(a){
         var b = '' +
-        'width: 85px;' +
-        'height: 24px;' +
+        //'width: 85px;' +
+        //'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
         'text-align: center;' +
