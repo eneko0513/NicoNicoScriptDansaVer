@@ -380,7 +380,6 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myCSSMain(a){
         a.style.cssText = '' +
-        'width: 85px;' + 
         'font-size:13px;' +
         'color:#FFFFFF;' +
         'text-align:left;' +
@@ -416,6 +415,7 @@ javascript: (function(f, dd) {
         switch(a.type){
             case 'button':
             b = b + '' +
+            'width: 85px' + 
             'cursor:pointer;' +
             'background-color:#999999;' +
             'color:#FFFFFF;' +
