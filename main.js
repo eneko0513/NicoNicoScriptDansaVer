@@ -250,7 +250,7 @@ javascript: (function(f, dd) {
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
         '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
         '<input id="myTrcVisibleChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="一括非表示" />' +
-        '<input id="myTrcLayerNameChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤー名変更" />' +
+        '<input id="myTrcLayerNameChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤ名変更" />' +
         '</div>' +
         '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;" multiple></select>' +
     //    '<div style="float:left;">' +
