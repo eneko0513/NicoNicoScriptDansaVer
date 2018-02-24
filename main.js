@@ -396,14 +396,14 @@ javascript: (function(f, dd) {
         'color:#000000;' +
         'text-align:left;' +
         'margin:0px 0px;' +
-        'padding:0px 0px;' +
+        'padding:4px 8px;' +
         'display: block;' +
         //'border : solid 1px #FFFFFF;' +
         '';
     }
     function myCSSCmd(a){
         var b = '' +
-        'width: 85px;' +
+        //'width: 85px;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
