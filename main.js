@@ -415,7 +415,7 @@ javascript: (function(f, dd) {
         switch(a.type){
             case 'button':
             b = b + '' +
-            'width: auto' +
+            'width:85px;' +
             'cursor:pointer;' +
             'background-color:#999999;' +
             'color:#FFFFFF;' +
