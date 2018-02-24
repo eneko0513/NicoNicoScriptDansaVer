@@ -430,7 +430,7 @@ javascript: (function(f, dd) {
     function myCSSCmdChk(a){
         //チェック用
         var b = '' +
-        'width: auto;' +
+        'width: 85px;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
@@ -449,7 +449,7 @@ javascript: (function(f, dd) {
     function myCSSCmdC(a){
         //色な
         var b = '' +
-        'width: auto;' +
+        'width: 85px;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
@@ -465,7 +465,7 @@ javascript: (function(f, dd) {
     }
     function myCSSLvl(emt){
         emt.style.cssText = '' +
-        'width: auto;' +
+        'width: 85px;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'background-color:#999999;' +
