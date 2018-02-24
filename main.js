@@ -28,9 +28,8 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = "スクリプトVer：" + "1.2.2.3\n" +// 大幅機能追加時は左の数値、機能追加は左から2つめ、バグ修正は右2つ目、一番右は誤字脱字レベル修正
-                      "更新内容：\n" +
-                      "レイヤー一括表示,非表示機能追加"  // ここに説明
+    var VersionInfo = "1.2.2.4";    // Ver情報
+    var VersionDescript = "aa";     // 更新内容概要
 
         //プレイヤーサイズチェック
         console.log(document.body.className)
@@ -304,8 +303,7 @@ javascript: (function(f, dd) {
         '</div>' +
         */
         '</div>' +
-        '<span class="VideoUploadDateMeta-title"><font color="red">' + VersionInfo + '</font></span>' +
-        '<div style = "clear:both;"></div>' +
+        '<div style = "clear:both;"><span class="VideoUploadDateMeta-title"><font color="red">バージョン：' + VersionInfo + '</font></span><p>更新概要：' + VersionDescript + '</p></div>' +
         '';
 
         e.after(f);
