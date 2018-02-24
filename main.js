@@ -431,13 +431,13 @@ javascript: (function(f, dd) {
     function myCSSCmdChk(a){
         //チェック用
         var b = '' +
-        'width: auto;' +
+        'width: 85px;' +
         'height: 24px;' +
         'padding:4px 8px;' +
         'border-radius: 12px;' +
         'text-align: center;' +
         'font:"";'+
-        'font-size: 13px;' +
+        'font-size: 11px;' +
         'border:solid;' +
         'border-width:2px;' +
         'border-color:#999999;' +
