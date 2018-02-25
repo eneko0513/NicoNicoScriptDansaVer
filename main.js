@@ -1313,12 +1313,15 @@ javascript: (function(f, dd) {
         //$('myTxtIpt').value = ''
         //全体
         var a;
+        var All = true;
         try{
             // 全行出力の場合はこちら
             a = $("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).value;
+            All = true;
         }catch(e){
             // 個別出力の場合はこちら
             a = $("myTxt" + $('myTrcSel2').value.split(" ")[0]).value;
+            All = false;
         }
 
 
@@ -1354,7 +1357,13 @@ javascript: (function(f, dd) {
 
         var b = a.split(/[\n\r]/g);
         var c;//調査文字
-        var d = $('myTrcSel2').value.split(" ")[1].split("_")
+
+        var d;
+        if (ALL = true){
+            d = $('myTrcSel2')[count-1].value.split(" ")[1].split("_");
+        }else{
+            d = $('myTrcSel2').value.split(" ")[1].split("_");
+        }
         var w = 0; //=  //あとでWから取得するように
         var l = 0; //=  //あとでlから取得するように
         var e;//計算用
@@ -1368,13 +1377,24 @@ javascript: (function(f, dd) {
         var r;//ループスイッチ用
         //色
         var u = "#FFFFFF";
-        try{
-            u = "#" + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[0]).toString(16).replace(/^[0-9A-F]$/, "0$&")
-            + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[1]).toString(16).replace(/^[0-9A-F]$/, "0$&")
-            + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[2]).toString(16).replace(/^[0-9A-F]$/, "0$&");
-        }catch(e){
-            u = "色未設定です";
+        if (All) {
+            try{
+                u = "#" + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[0]).toString(16).replace(/^[0-9A-F]$/, "0$&")
+                + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[1]).toString(16).replace(/^[0-9A-F]$/, "0$&")
+                + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[2]).toString(16).replace(/^[0-9A-F]$/, "0$&");
+            }catch(e){
+                u = "色未設定です";
+            }
+        }else{
+            try{
+                u = "#" + parseInt($("myTxt" + $('myTrcSel2').value.split(" ")[0]).style.color.match(/\d+/g)[0]).toString(16).replace(/^[0-9A-F]$/, "0$&")
+                + parseInt($("myTxt" + $('myTrcSel2').value.split(" ")[0]).style.color.match(/\d+/g)[1]).toString(16).replace(/^[0-9A-F]$/, "0$&")
+                + parseInt($("myTxt" + $('myTrcSel2').value.split(" ")[0]).style.color.match(/\d+/g)[2]).toString(16).replace(/^[0-9A-F]$/, "0$&");
+            }catch(e){
+                u = "色未設定です";
+            }
         }
+
 
         var v = '';//コマンド
         r = true;
