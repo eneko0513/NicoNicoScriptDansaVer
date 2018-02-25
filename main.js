@@ -1772,7 +1772,7 @@ javascript: (function(f, dd) {
                     }
                 }
             }
-            z = z.replace(/\uA001/g,'[A0]');
+            z = z.replace(/\uA001/g,' ');
             z = z.replace(/\uA002/g,'<br>');
             z = z.replace(/\u0009/g,'[tb]');
             z = z.replace(/\u200A/g,'[0A]');
