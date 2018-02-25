@@ -29,8 +29,9 @@ javascript: (function(f, dd) {
     function myOnload(){
 
     var VersionInfo = "1.2.4.0";    // Ver情報
-    var VersionDescript = "更新概要欄の位置調整、セレクトボックスの複数行選択対応（機能未実装）,フォントサイズ縮小"
-                        + "レイヤー名設定機能の追加 ※一つでもレイヤーを削除すると他のレイヤー名が消えちゃう";
+    var VersionDescript = "更新概要欄の位置調整、セレクトボックスの複数行選択対応（機能未実装）,フォントサイズ縮小\n"
+                        + "レイヤー名設定機能の追加 ※一つでもレイヤーを削除すると他のレイヤー名が消えちゃう\n"
+                        + "なのでここはあとで何とかしよう・・。";
     // 更新内容概要
 
         //プレイヤーサイズチェック
@@ -306,6 +307,7 @@ javascript: (function(f, dd) {
         */
         '</div>' +
         '<div style = "clear:both;"></div>' +
+        '<input id="VersionInformation" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="'+ VersionInfo +'" />'
         '<div><p class="VideoUploadDateMeta-title"><font color="red">バージョン：' + VersionInfo + '</font></p><p>  更新概要：' + VersionDescript + '</p></div>';
         '';
 
@@ -2306,8 +2308,12 @@ function myDelCookie(key){
 }
 //----------------------------------------------------------------------------------------------------
 
-
-
+/*----------------------------------------------------------------------------------------------------
+[バージョン情報]
+----------------------------------------------------------------------------------------------------*/
+$('VersionInformation').onclick = function(){
+    alert(VersionDescript);
+}
 
 
 
