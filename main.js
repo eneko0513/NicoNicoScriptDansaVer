@@ -1300,6 +1300,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     var count = 0;
     $('myTxtExpALL').onclick = function(){
+        count = 0;
         for(var i = 0; i < $('myTrcSel2').length; i++){
             $('myTrcSel2')[i].selected= true;
             $('myTxtExpOne').onclick();
@@ -1311,7 +1312,15 @@ javascript: (function(f, dd) {
         if ($('myTrcSel2').value === "") {return;}
         //$('myTxtIpt').value = ''
         //全体
-        var a = $("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).value;
+        var a;
+        try{
+            // 全行出力の場合はこちら
+             a = $("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).value;
+        }catch(exception e){
+            // 個別出力の場合はこちら
+             a = $("myTxt" + $('myTrcSel2')[[0]-1].value.split(" ")[0]).value;
+        }
+
 
         //半スペ、A0が含まれていたらNG
         if (a.indexOf('\u00A0') != -1) {
