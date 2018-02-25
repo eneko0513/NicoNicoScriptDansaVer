@@ -256,7 +256,7 @@ javascript: (function(f, dd) {
         '<input id="myTrcVisibleChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="一括非表示" />' +
         '<input id="myTrcLayerNameChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤ名変更" />' +
         '</div>' +
-        '<select name="MyTrcSel" id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;" multiple="multiple"></select>' +
+        '<select name="MyTrcSel" id="myTrcSel2" class="" size="2" style="height:100px; width:450px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;" multiple="multiple"></select>' +
     //    '<div style="float:left;">' +
     //    '<div style="position:relative; padding:2px 0;">' +
     //    '<label class="VideoUploadDateMeta-title">FONT SIZE</label>' +
