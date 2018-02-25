@@ -2070,7 +2070,7 @@ javascript: (function(f, dd) {
     /*----------------------------------------------------------------------------------------------------
     [レイヤー名変更機能]
     ----------------------------------------------------------------------------------------------------*/
-    $('myTrcColor').onclick = function(){
+    $('myTrcLayerNameChange').onclick = function(){
         var a = $("myTxt" + $('myTrcSel2').value.split(" ")[0]);
         $('myTrcSel2').add( (new Option(m + " " + $('myTrcSel').value + " ●TEST")) );
     }
