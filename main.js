@@ -2085,10 +2085,12 @@ javascript: (function(f, dd) {
           // for..in文でまわして、配列にいれた添え字と、添え字をもとに文字列を出力させる
           for(var txt in ary){
             console.log(ary[txt]);  // 添え字出力
+            console.log($('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text);
             console.log(e.children[ary[txt]].textContent);  // 文字列出力
+            //$('myTrcSel2')[$('myTrcSel2').value.split(" ")[ary[txt]-1]].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[ary[txt]-1]].text +  "aa";
           }
 
-        //$('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text +  "aa";
+        $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text +  "aa";
     }
 
 
