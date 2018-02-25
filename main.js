@@ -253,7 +253,7 @@ javascript: (function(f, dd) {
         '<input id="myTrcVisibleChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="一括非表示" />' +
         '<input id="myTrcLayerNameChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤ名変更" />' +
         '</div>' +
-        '<select id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;" multiple></select>' +
+        '<select name="MyTrcSel" id="myTrcSel2" class="" size="2" style="height:100px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;" multiple="multiple"></select>' +
     //    '<div style="float:left;">' +
     //    '<div style="position:relative; padding:2px 0;">' +
     //    '<label class="VideoUploadDateMeta-title">FONT SIZE</label>' +
@@ -2072,7 +2072,7 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     $('myTrcLayerNameChange').onclick = function(){
         var array = [];
-        $('[id=myTrcSel2] option:selected').each(function() {
+        $('[name=myTrcSel2] option:selected').each(function() {
             array.push($(this).text());
         });
         console.log(array);
