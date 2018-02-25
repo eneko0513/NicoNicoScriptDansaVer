@@ -28,9 +28,9 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     function myOnload(){
 
-    var VersionInfo = "1.2.2.5";    // Ver情報
+    var VersionInfo = "1.3.0.0";    // Ver情報
     var VersionDescript = "更新概要欄の位置調整、セレクトボックスの複数行選択対応（機能未実装）,フォントサイズ縮小" + "\n";     // 更新内容概要
-                        + "";
+                        + "レイヤー名設定機能の追加";
 
 
         //プレイヤーサイズチェック
@@ -2111,6 +2111,14 @@ javascript: (function(f, dd) {
     [レイヤー名変更機能]
     ----------------------------------------------------------------------------------------------------*/
     $('myTrcLayerNameChange').onclick = function(){
+        var LayerName = "";
+        try{
+            // 入力ダイアログを表示 ＋ 入力内容を user に代入
+	       LayerName = window.prompt("レイヤー名を入力してください", "");
+        }catch(e){
+           alert("エラーが発生");
+        }
+
         var e = document.getElementById('myTrcSel2');
           var ary = new Array();
           var num = 0;
@@ -2127,7 +2135,7 @@ javascript: (function(f, dd) {
             console.log(ary[txt]);  // 添え字出力
             console.log($('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text);
             console.log(e.children[ary[txt]].textContent);  // 文字列出力
-            $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text +  "aa";
+            $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text + " " + LayerName;
           }
     }
 
