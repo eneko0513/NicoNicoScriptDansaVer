@@ -1311,10 +1311,10 @@ javascript: (function(f, dd) {
     //---------
     $('myTxtExpOne').onclick = function(){
         count++;
-        if (!Allclick){
+        if (!AllClick){
             count=0;
         }
-        
+
         if ($('myTrcSel2').value === "") {return;}
         //$('myTxtIpt').value = ''
         //全体
@@ -1365,7 +1365,7 @@ javascript: (function(f, dd) {
         var c;//調査文字
 
         var d;
-        if (ALL = true){
+        if (ALL){
             d = $('myTrcSel2')[count-1].value.split(" ")[1].split("_");
         }else{
             d = $('myTrcSel2').value.split(" ")[1].split("_");
