@@ -307,9 +307,7 @@ javascript: (function(f, dd) {
         */
         '</div>' +
         '<div style = "clear:both;"></div>' +
-        '<input id="VersionInformation" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="'+ VersionInfo +'" />'
-        '<div><p class="VideoUploadDateMeta-title"><font color="red">バージョン：' + VersionInfo + '</font></p><p>  更新概要：' + VersionDescript + '</p></div>';
-        '';
+        '<input id="VersionInformation" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="'+ VersionInfo +'" />';
 
         e.after(f);
         myCSSSub(f);
