@@ -1299,8 +1299,10 @@ javascript: (function(f, dd) {
     [出力]
     ----------------------------------------------------------------------------------------------------*/
     var count = 0;
+    var AllClick = false;
     $('myTxtExpALL').onclick = function(){
         count = 0;
+        AllClick = true;
         for(var i = 0; i < $('myTrcSel2').length; i++){
             $('myTrcSel2')[i].selected= true;
             $('myTxtExpOne').onclick();
@@ -1309,6 +1311,10 @@ javascript: (function(f, dd) {
     //---------
     $('myTxtExpOne').onclick = function(){
         count++;
+        if (!Allclick){
+            count=0;
+        }
+        
         if ($('myTrcSel2').value === "") {return;}
         //$('myTxtIpt').value = ''
         //全体
@@ -1780,6 +1786,8 @@ javascript: (function(f, dd) {
             }
             //n配列なくなるまでループ
         }
+        // 最後に全出力からを判定するフラグをfalseに戻す
+        AllClick = false;
     }
     /*----------------------------------------------------------------------------------------------------
     [入力]
