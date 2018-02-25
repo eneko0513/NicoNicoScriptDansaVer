@@ -1307,6 +1307,8 @@ javascript: (function(f, dd) {
             $('myTrcSel2')[i].selected= true;
             $('myTxtExpOne').onclick();
         }
+        // 最後に全出力からを判定するフラグをfalseに戻す
+        AllClick = false;
     }
     //---------
     $('myTxtExpOne').onclick = function(){
@@ -1365,7 +1367,7 @@ javascript: (function(f, dd) {
         var c;//調査文字
 
         var d;
-        if (ALL){
+        if (All){
             d = $('myTrcSel2')[count-1].value.split(" ")[1].split("_");
         }else{
             d = $('myTrcSel2').value.split(" ")[1].split("_");
@@ -1786,8 +1788,7 @@ javascript: (function(f, dd) {
             }
             //n配列なくなるまでループ
         }
-        // 最後に全出力からを判定するフラグをfalseに戻す
-        AllClick = false;
+
     }
     /*----------------------------------------------------------------------------------------------------
     [入力]
