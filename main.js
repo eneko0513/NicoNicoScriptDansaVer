@@ -2071,8 +2071,12 @@ javascript: (function(f, dd) {
     [レイヤー名変更機能]
     ----------------------------------------------------------------------------------------------------*/
     $('myTrcLayerNameChange').onclick = function(){
-        var a = $("myTxt" + $('myTrcSel2').value.split(" ")[0]);
-        $('myTrcSel2').add( (new Option(m + " " + $('myTrcSel').value + " ●TEST")) );
+        var array = [];
+        $('[id=myTrcSel2] option:selected').each(function() {
+            array.push($(this).text());
+        });
+        console.log(array);
+        $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text + "aa";
     }
 
     /*----------------------------------------------------------------------------------------------------
