@@ -2071,13 +2071,27 @@ javascript: (function(f, dd) {
     [レイヤー名変更機能]
     ----------------------------------------------------------------------------------------------------*/
     $('myTrcLayerNameChange').onclick = function(){
-        var array = [];
-        $('[name=myTrcSel2] option:selected').each(function() {
-            array.push($(this).text());
-        });
-        console.log(array);
-        $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text + "aa";
+        var e = document.getElementById('myTrcSel2');
+          var ary = new Array();
+          var num = 0;
+
+          //optionを順番に見て、selectedとなっているものの添え字を配列にいれる
+          for(var i = 0; i < e.childElementCount; i++){
+            if(e.getElementsByTagName('option')[i].selected){
+              ary[num] = i;
+              num++;
+            }
+          }
+          // for..in文でまわして、配列にいれた添え字と、添え字をもとに文字列を出力させる
+          for(var txt in ary){
+            console.log(ary[txt]);  // 添え字出力
+            console.log(e.children[ary[txt]].textContent);  // 文字列出力
+          }
+
+        //$('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text +  "aa";
     }
+
+
 
     /*----------------------------------------------------------------------------------------------------
     [スライダー]
