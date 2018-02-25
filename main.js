@@ -1298,6 +1298,7 @@ javascript: (function(f, dd) {
     /*----------------------------------------------------------------------------------------------------
     [出力]
     ----------------------------------------------------------------------------------------------------*/
+    var count = 0;
     $('myTxtExpALL').onclick = function(){
         for(var i = 0; i < $('myTrcSel2').length; i++){
             $('myTrcSel2')[i].selected= true;
@@ -1306,10 +1307,11 @@ javascript: (function(f, dd) {
     }
     //---------
     $('myTxtExpOne').onclick = function(){
+        count++;
         if ($('myTrcSel2').value === "") {return;}
         //$('myTxtIpt').value = ''
         //全体
-        var a = $("myTxt" + $('myTrcSel2').value.split(" ")[0]).value;
+        var a = $("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).value;
 
         //半スペ、A0が含まれていたらNG
         if (a.indexOf('\u00A0') != -1) {
@@ -1358,9 +1360,9 @@ javascript: (function(f, dd) {
         //色
         var u = "#FFFFFF";
         try{
-            u = "#" + parseInt($("myTxt" + $('myTrcSel2').value.split(" ")[0]).style.color.match(/\d+/g)[0]).toString(16).replace(/^[0-9A-F]$/, "0$&")
-            + parseInt($("myTxt" + $('myTrcSel2').value.split(" ")[0]).style.color.match(/\d+/g)[1]).toString(16).replace(/^[0-9A-F]$/, "0$&")
-            + parseInt($("myTxt" + $('myTrcSel2').value.split(" ")[0]).style.color.match(/\d+/g)[2]).toString(16).replace(/^[0-9A-F]$/, "0$&");
+            u = "#" + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[0]).toString(16).replace(/^[0-9A-F]$/, "0$&")
+            + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[1]).toString(16).replace(/^[0-9A-F]$/, "0$&")
+            + parseInt($("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).style.color.match(/\d+/g)[2]).toString(16).replace(/^[0-9A-F]$/, "0$&");
         }catch(e){
             u = "色未設定です";
         }
@@ -2085,12 +2087,10 @@ javascript: (function(f, dd) {
           // for..in文でまわして、配列にいれた添え字と、添え字をもとに文字列を出力させる
           for(var txt in ary){
             console.log(ary[txt]);  // 添え字出力
-            console.log($('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text);
+            console.log($('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text);
             console.log(e.children[ary[txt]].textContent);  // 文字列出力
-            //$('myTrcSel2')[$('myTrcSel2').value.split(" ")[ary[txt]-1]].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[ary[txt]-1]].text +  "aa";
+            $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text +  "aa";
           }
-
-        $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2').value.split(" ")[0]-1].text +  "aa";
     }
 
 
