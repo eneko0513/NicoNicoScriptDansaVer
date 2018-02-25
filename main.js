@@ -29,7 +29,7 @@ javascript: (function(f, dd) {
     function myOnload(){
 
     var VersionInfo = "1.2.4.0";    // Ver情報
-    var VersionDescript = "更新概要欄の位置調整、セレクトボックスの複数行選択対応（機能未実装）,フォントサイズ縮小" +
+    var VersionDescript = "更新概要欄の位置調整、セレクトボックスの複数行選択対応（機能未実装）,フォントサイズ縮小"
                         + "レイヤー名設定機能の追加 ※一つでもレイヤーを削除すると他のレイヤー名が消えちゃう";
     // 更新内容概要
 
@@ -2132,10 +2132,10 @@ javascript: (function(f, dd) {
           }
           // for..in文でまわして、配列にいれた添え字と、添え字をもとに文字列を出力させる
           for(var txt in ary){
-            console.log(ary[txt]);  // 添え字出力
-            console.log($('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text);
-            console.log(e.children[ary[txt]].textContent);  // 文字列出力
-            $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text + " " + LayerName;
+            //console.log(ary[txt]);  // 添え字出力
+            //console.log($('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text);
+            //console.log(e.children[ary[txt]].textContent);  // 文字列出力
+            $('myTrcSel2')[$('myTrcSel2')[ary[txt]].value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2')[ary[txt]].value.split(" ")[0]-1].text + " " + LayerName;
           }
     }
 
