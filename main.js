@@ -1315,10 +1315,10 @@ javascript: (function(f, dd) {
         var a;
         try{
             // 全行出力の場合はこちら
-             a = $("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).value;
+            a = $("myTxt" + $('myTrcSel2')[count-1].value.split(" ")[0]).value;
         }catch(exception e){
             // 個別出力の場合はこちら
-             a = $("myTxt" + $('myTrcSel2')[[0]-1].value.split(" ")[0]).value;
+            a = $("myTxt" + $('myTrcSel2')[[0]-1].value.split(" ")[0]).value;
         }
 
 
