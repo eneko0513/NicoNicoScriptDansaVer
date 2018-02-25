@@ -33,7 +33,7 @@ javascript: (function(f, dd) {
                         + "なのでここはあとで何とかしよう・・。";
     function myOnload(){
         // 更新内容概要
-        var VersionInfo = "ver:" + "1.2.4.0";    // Ver情報
+        var VersionInfo = "ver:" + "1.2.5.0";    // Ver情報
 
 
         //プレイヤーサイズチェック
