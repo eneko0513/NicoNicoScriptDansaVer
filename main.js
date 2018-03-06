@@ -718,8 +718,11 @@ javascript: (function(f, dd) {
                 var j = a.indexOf("]",0);
                 var b = a.slice(1, j);
                 a = a.slice(j+1);
-                e.value = b;
-                e.dispatchEvent(new Event("input",{"bubbles":!0}));
+                //e.value = b;
+                //e.dispatchEvent(new Event("input",{"bubbles":!0}));
+                Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set.call(e, b), e.dispatchEvent(new Event("input", {
+                    bubbles: !0
+                }));
             }
         }
 
@@ -755,7 +758,7 @@ javascript: (function(f, dd) {
 
         //f.value = a;
         //f.dispatchEvent(new Event("input",{"bubbles":!0}));
-        Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(f, a), elements_text.dispatchEvent(new Event("input", {
+        Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(f, a), f.dispatchEvent(new Event("input", {
           bubbles: !0
         }))
 
