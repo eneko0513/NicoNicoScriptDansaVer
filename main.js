@@ -645,7 +645,7 @@ javascript: (function(f, dd) {
             //myInnerText("myDivCmtStat", "Wait…");
             var element = document.getElementsByClassName('GridCell OwnerEditMenuContainer-left');
             if( element.length == 1){
-                setTimeout(myBoxIptS, 1800);
+                setTimeout(myBoxIptS, 2500);
             }else{
                 setTimeout(myBoxIptS, 6000);
             }
@@ -660,7 +660,7 @@ javascript: (function(f, dd) {
             var element = document.getElementsByClassName('GridCell OwnerEditMenuContainer-left');
             if( element.length == 1){
                 clearInterval(myTimer);
-                myTimer = setInterval((function b(){myBoxIptS(0); return b;}()), 1800);
+                myTimer = setInterval((function b(){myBoxIptS(0); return b;}()), 2500);
             }else{
                 clearInterval(myTimer);
                 myTimer = setInterval((function b(){myBoxIptS(0); return b;}()), 6000);
@@ -808,7 +808,7 @@ javascript: (function(f, dd) {
         if (g === 0){
             var element = document.getElementsByClassName('GridCell OwnerEditMenuContainer-left');
             if( element.length == 1){
-                setTimeout(function(){mySeekTimer();},1500);
+                setTimeout(function(){mySeekTimer();},2500);
             }else{
                 setTimeout(function(){mySeekTimer();},3000);
             }
