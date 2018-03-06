@@ -30,10 +30,11 @@ javascript: (function(f, dd) {
     ----------------------------------------------------------------------------------------------------*/
     var VersionDescript = "更新概要欄の位置調整\nセレクトボックスの複数行選択対応\nフォントサイズ縮小\n"
                         + "レイヤー名設定機能の追加\n※一つでもレイヤーを削除すると他のレイヤー名が消えちゃう\n"
-                        + "なのでここはあとで何とかしよう・・。\n出力時の[A0]を空白文字のA0で出力するように変更";
+                        + "なのでここはあとで何とかしよう・・。\n出力時の[A0]を空白文字のA0で出力するように変更\n\n"
+                        + "1.2.6.0：投下機能を追加";
     function myOnload(){
         // 更新内容概要
-        var VersionInfo = "ver:" + "1.2.5.0";    // Ver情報
+        var VersionInfo = "ver:" + "1.2.6.0";    // Ver情報
 
 
         //プレイヤーサイズチェック
@@ -744,13 +745,20 @@ javascript: (function(f, dd) {
 
         //コマンドがあればセット
         if (b){
-            e.value = b;
-            e.dispatchEvent(new Event("input",{"bubbles":!0}));
+            //e.value = b;
+            //e.dispatchEvent(new Event("input",{"bubbles":!0}));
+            Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set.call(e, b), e.dispatchEvent(new Event("input", {
+                bubbles: !0
+            }));
         }
 
 
-        f.value = a;
-        f.dispatchEvent(new Event("input",{"bubbles":!0}));
+        //f.value = a;
+        //f.dispatchEvent(new Event("input",{"bubbles":!0}));
+        Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(f, a), elements_text.dispatchEvent(new Event("input", {
+          bubbles: !0
+        }))
+
 
         //投下
         if (g === 0){
