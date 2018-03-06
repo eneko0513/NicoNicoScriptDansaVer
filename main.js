@@ -31,10 +31,11 @@ javascript: (function(f, dd) {
     var VersionDescript = "更新概要欄の位置調整\nセレクトボックスの複数行選択対応\nフォントサイズ縮小\n"
                         + "レイヤー名設定機能の追加\n※一つでもレイヤーを削除すると他のレイヤー名が消えちゃう\n"
                         + "なのでここはあとで何とかしよう・・。\n出力時の[A0]を空白文字のA0で出力するように変更\n\n"
-                        + "1.2.6.0：投下機能を追加";
+                        + "1.2.6.0：投下機能を追加\n"
+                        + "1.3.0.0：投下機能の投コメ速度版追加";
     function myOnload(){
         // 更新内容概要
-        var VersionInfo = "ver:" + "1.2.6.0";    // Ver情報
+        var VersionInfo = "ver:" + "1.3.0.0";    // Ver情報
 
 
         //プレイヤーサイズチェック
@@ -642,7 +643,13 @@ javascript: (function(f, dd) {
             //if ($("myCmdChkB").checked){
             //if (myNumCheck(val) == false) { return; }
             //myInnerText("myDivCmtStat", "Wait…");
-            setTimeout(myBoxIptS, 6000);
+            var element = document.getElementsByClassName('GridCell OwnerEditMenuContainer-left');
+            if( element.length == 1){
+                setTimeout(myBoxIptS, 1800);
+            }else{
+                setTimeout(myBoxIptS, 6000);
+            }
+
             //} else {
             //	myBoxIptS(1);
             //}
@@ -650,8 +657,16 @@ javascript: (function(f, dd) {
             //連続投下は危ないのでコメ禁モード使う
             //投コメ来たら投コメモードで考える
             //初回即実行なので75停止時、クリア効かなくて暴走する
-            clearInterval(myTimer);
-            myTimer = setInterval((function b(){myBoxIptS(0); return b;}()), 6000);
+            var element = document.getElementsByClassName('GridCell OwnerEditMenuContainer-left');
+            if( element.length == 1){
+                clearInterval(myTimer);
+                myTimer = setInterval((function b(){myBoxIptS(0); return b;}()), 1800);
+            }else{
+                clearInterval(myTimer);
+                myTimer = setInterval((function b(){myBoxIptS(0); return b;}()), 6000);
+            }
+
+
         }
     }
     //----------------------------------------------------------------------------------------------------
@@ -791,7 +806,13 @@ javascript: (function(f, dd) {
         }
         $('myTxtIpt').value = d;
         if (g === 0){
-            setTimeout(function(){mySeekTimer();},3000);
+            var element = document.getElementsByClassName('GridCell OwnerEditMenuContainer-left');
+            if( element.length == 1){
+                setTimeout(function(){mySeekTimer();},1500);
+            }else{
+                setTimeout(function(){mySeekTimer();},3000);
+            }
+
         }
     }
     /*----------------------------------------------------------------------------------------------------
