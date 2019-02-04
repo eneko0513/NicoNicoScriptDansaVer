@@ -246,7 +246,7 @@ javascript: (function(f, dd) {
         '<div style="margin:10px; display: inline;"></div>' +
         '<input id="myTrcRepMode" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="置換モード" />' +
         '</div>' +
-        '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
+        '<div id="slider1" style="position:relative; width:500px; height:28px;">' +
         '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
         '<input id="myTrcVisibleChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="一括非表示" />' +
         '<input id="myTrcLayerNameChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="名前変更" />' +
