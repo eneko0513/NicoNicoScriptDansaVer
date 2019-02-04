@@ -183,7 +183,6 @@ javascript: (function(f, dd) {
         '<div style="margin:50px; display: inline;"></div>' +
         '<input id="myCmdBoxC" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="クリア" />' +
         '<div style="margin:20px; display: inline;"></div>' +
-        '<input id="myCmdBoxIpt" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤー読込" />' +
         '</div>' +
         '';
         c.after(d);
@@ -2164,7 +2163,7 @@ javascript: (function(f, dd) {
             //console.log(ary[txt]);  // 添え字出力
             //console.log($('myTrcSel2')[$('myTrcSel2')[txt].value.split(" ")[0]-1].text);
             //console.log(e.children[ary[txt]].textContent);  // 文字列出力
-            $('myTrcSel2')[$('myTrcSel2')[ary[txt]].value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2')[ary[txt]].value.split(" ")[0]-1].text + " " + LayerName;
+            $('myTrcSel2')[$('myTrcSel2')[ary[txt]].value.split(" ")[0]-1].text = $('myTrcSel2')[$('myTrcSel2')[ary[txt]].value.split(" ")[0]-1].text + " ★" + LayerName;
           }
     }
 
