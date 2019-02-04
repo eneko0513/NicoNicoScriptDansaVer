@@ -11,8 +11,6 @@ javascript: (function(f, dd) {
     //const myCmtSet = document.getElementsByClassName('CommentInput-textarea')[0];
     //const myCmdSet = document.getElementsByClassName('CommentCommandInput')[0];
     //const myExtUrl = chrome.extension.getURL('');
-
-
     var $ = function (id){return (typeof id =='string')?document.getElementById(id):id;};
     var myDrg = 'F';
     var mySldVal = '0';
@@ -21,9 +19,6 @@ javascript: (function(f, dd) {
     var myKey = false;
     var myTimer
     myOnload();
-
-
-
 
     /*----------------------------------------------------------------------------------------------------
     [起動]
@@ -35,8 +30,7 @@ javascript: (function(f, dd) {
                         + "1.3.0.0：投下機能の投コメ速度版追加";
     function myOnload(){
         // 更新内容概要
-        var VersionInfo = "ver:" + "1.3.0.0";    // Ver情報
-
+        var VersionInfo = "ver:" + "1.4.0";    // Ver情報
 
         //プレイヤーサイズチェック
         console.log(document.body.className)
@@ -44,7 +38,6 @@ javascript: (function(f, dd) {
         var n = document.getElementsByClassName('MainContainer')[0];
         var v = document.getElementsByClassName('VideoPlayer')[0];
         //メイン
-
         var a = document.createElement('div');
         a.id = 'myEmtMain';
         a.innerHTML = '[ - ]Main';
@@ -256,7 +249,9 @@ javascript: (function(f, dd) {
         '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
         '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
         '<input id="myTrcVisibleChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="一括非表示" />' +
-        '<input id="myTrcLayerNameChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤ名変更" />' +
+        '<input id="myTrcLayerNameChange" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="名前変更" />' +
+        '<input id="saveTraceLayerData" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤ保存" />' +
+        '<input id="LoadTraceLayerData" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤ復元" />' +
         '</div>' +
         '<select name="MyTrcSel" id="myTrcSel2" class="" size="2" style="height:100px; width:450px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;" multiple="multiple"></select>' +
     //    '<div style="float:left;">' +
