@@ -1,4 +1,4 @@
-﻿// 20200203_v1
+﻿// 20200203_v2
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -251,6 +251,7 @@ javascript: (function(f, dd) {
             '<input id="myTrcImgDisp" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="非表示" />' +
             '<div style="margin:10px; display: inline;"></div>' +
             '<input id="myTrcRepMode" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="置換M" />' +
+            '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
             '</div>' +
             '<select id="myTrcSel2" class="" size="2" style="height:200px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
             '<div style="float:left;">' +
@@ -284,7 +285,6 @@ javascript: (function(f, dd) {
             '<input id="myTransXD" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="▶" />' +
             '</div>' +
             '<div id="slider1" style="position:relative; width:255px; height:28px;">' +
-            '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
             '<div style="background:#ddd; height:3px; border:1px inset #aaa; position:relative; top:16px; font-size:0px;"></div>' +
             '<input id="slider2" class="myCmd" type="button" value="R" style="position:absolute; height:20px; display:block; border-radius: 12px; border:none; cursor:pointer;">' +
             '<input id="myTxtR" disabled class="myCmd" type="text" value="0" style="position:absolute; left:280px; width: 50px;">' +
