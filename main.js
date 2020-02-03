@@ -1,4 +1,4 @@
-﻿// 201802171215
+﻿// 20200203_v1
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -327,7 +327,7 @@ javascript: (function(f, dd) {
         g.src = "";
         v.after(g);
 
-        var h = document.createElement("img");
+        var h = document.createElement("canvas");
         h.id = "myImg";
         h.style.cssText = '' +
             'position: absolute;' +
