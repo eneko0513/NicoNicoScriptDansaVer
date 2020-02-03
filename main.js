@@ -337,7 +337,7 @@ javascript: (function(f, dd) {
             'width: 100%;' +
             'height: 100%;' +
             'border:none;' +
-            'z-index: 2;' +
+            'z-index: 55;' +
             'display: none;';
         h.src = "";
         g.after(h);
