@@ -772,11 +772,17 @@ javascript: (function(f, dd) {
             b = b + "　"
             e.value = b;
             e.dispatchEvent(new Event("input", { "bubbles": !0 }));
+            Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(e, b), e.dispatchEvent(new Event("input", {
+                bubbles: !0
+            }))
         }
 
 
         f.value = a;
         f.dispatchEvent(new Event("input", { "bubbles": !0 }));
+        Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(a, f), f.dispatchEvent(new Event("input", {
+            bubbles: !0
+        }))
 
         // 投下
         if (g === 0) {
