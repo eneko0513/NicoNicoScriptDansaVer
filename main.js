@@ -1,4 +1,4 @@
-﻿// 20200204_v3
+﻿// 20200204_v4
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -780,7 +780,7 @@ javascript: (function(f, dd) {
 
         f.value = a;
         f.dispatchEvent(new Event("input", { "bubbles": !0 }));
-        Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(a, f), f.dispatchEvent(new Event("input", {
+        Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(f, a), f.dispatchEvent(new Event("input", {
             bubbles: !0
         }))
 
