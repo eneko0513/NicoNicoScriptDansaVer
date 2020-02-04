@@ -771,7 +771,7 @@ javascript: (function(f, dd) {
         if (b) {
             // b = b + Array(128).join('\u2003')
             b = b + "　"
-            e.value = b;
+            // e.value = b;
             // e.dispatchEvent(new Event("input", { "bubbles": !0 }));
             Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set.call(e, b), e.dispatchEvent(new Event("input", {
                 bubbles: !0
@@ -779,7 +779,7 @@ javascript: (function(f, dd) {
         }
 
 
-        f.value = a;
+        // f.value = a;
         // f.dispatchEvent(new Event("input", { "bubbles": !0 }));
         Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(f, a), f.dispatchEvent(new Event("input", {
             bubbles: !0
