@@ -1,4 +1,4 @@
-﻿// 20200203_v2
+﻿// 20200204_v1
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
