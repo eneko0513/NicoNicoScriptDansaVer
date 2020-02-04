@@ -1,4 +1,4 @@
-﻿// 20200204_v4
+﻿// 20200204_v5
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -716,6 +716,7 @@ javascript: (function(f, dd) {
         var c = $('myTxtIpt').value.split(/[\n\r]/g);
         var e = document.getElementsByClassName('CommentCommandInput')[0];
         var f = document.getElementsByClassName('CommentInput-textarea')[0];
+        var elements_post = document.getElementsByClassName("CommentPostButton")[0];
         var h = $('myEmtBox');
 
         var a, m, n;
@@ -771,7 +772,7 @@ javascript: (function(f, dd) {
             // b = b + Array(128).join('\u2003')
             b = b + "　"
             e.value = b;
-            e.dispatchEvent(new Event("input", { "bubbles": !0 }));
+            // e.dispatchEvent(new Event("input", { "bubbles": !0 }));
             Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set.call(e, b), e.dispatchEvent(new Event("input", {
                 bubbles: !0
             }))
@@ -779,14 +780,21 @@ javascript: (function(f, dd) {
 
 
         f.value = a;
-        f.dispatchEvent(new Event("input", { "bubbles": !0 }));
+        // f.dispatchEvent(new Event("input", { "bubbles": !0 }));
         Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set.call(f, a), f.dispatchEvent(new Event("input", {
             bubbles: !0
         }))
 
         // 投下
         if (g === 0) {
-            setTimeout(function () { document.getElementsByClassName("CommentPostButton")[0].dispatchEvent(new MouseEvent("click", { "view": window, "bubbles": !0, "cancelable": !0 })); }, p);
+            setTimeout(function () { 
+                /* document.getElementsByClassName("CommentPostButton")[0].dispatchEvent(new MouseEvent("click", { "view": window, "bubbles": !0, "cancelable": !0 })); */
+                elements_post.dispatchEvent(new MouseEvent("click", {
+                    view: window,
+                    bubbles: !0,
+                    cancelable: !0
+                }))
+            }, p);
         } else {
             h.innerHTML = h.innerHTML.slice(0, 8) + '　　　　　info---' + '1行セット終了(' + a.length + ')';
         }
