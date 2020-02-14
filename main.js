@@ -3214,7 +3214,8 @@ javascript: (function(f, dd) {
         for (let i = 0; i < saveElements.childNodes.length; i++) {
             tmp = {
                 id: saveElements.childNodes[i].id,
-                value: saveElements.childNodes[i].value
+                value: saveElements.childNodes[i].value,
+                selected: saveElements.childNodes[i].selected
             }
             jsonStr.push(tmp);
         }
@@ -3236,6 +3237,7 @@ javascript: (function(f, dd) {
         for (var i = 0; i < document.getElementById('myTrcSel2').childNodes.length; i++) {
             document.getElementById('tempLayer').childNodes[i].value = restoreValueList[i].value;
             document.getElementById('tempLayer').childNodes[i].addEventListener("focus", myTxtSelect, false);
+            document.getElementById('myTrcSel2').childNodes[i].selected = restoreValueList[i].selected;
         }
     };
 
