@@ -212,6 +212,8 @@ javascript: (function(f, dd) {
             '<label class="VideoUploadDateMeta-title">画面サイズ</label>' +
             '<input id="myVideoSizeM" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="中" />' +
             '<input id="myVideoSizeL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="大" />' +
+            '<input id="backup" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="バックアップ" />' +
+            '<input id="restore" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="リストア" />' +
             '</div>' +
             '<div style="padding:2px 0;">' +
             '<select id="myTrcSel" class="myCmd">' +
@@ -254,7 +256,7 @@ javascript: (function(f, dd) {
             '<input id="myTrcColor" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="文字色変更" />' +
             '</div>' +
             '<select id="myTrcSel2" class="" size="2" style="height:200px; width:320px; padding:4px 8px; margin:2px 20px 2px 0; border:none; float:left;"></select>' +
-            '<div style="float:left;">' +
+            '<div id="temp" style="display: none; float:left;">' +
             '<div style="position:relative; padding:2px 0;">' +
             '<label class="VideoUploadDateMeta-title">FONT SIZE</label>' +
             '<input id="myFontSize" class="myCmd" type="text" value="0" style="width: 50px;">' +
@@ -3197,11 +3199,14 @@ javascript: (function(f, dd) {
 
             var t = document.getElementById("myTxt" + $('myTrcSel2').value.split(" ")[0]);
             t.style.color = "#" + r + "" + g + "" + b;
-
-
         }
     }
 
+    backup.onclick = function() {
+        var saveElements = document.getElementById('myTrcSel2');
+
+        localStorage.setItem('saveLayer', saveElements);
+    }
 
 
 
