@@ -356,9 +356,7 @@ javascript: (function(f, dd) {
         for (var i = 0; i < x.length; ++i) {
             myCSSCmdChk(x[i]);
         }
-
-        document.getElementsByClassName('PlayerContainer')[0].after('<div id="tempLayer"></div>');
-
+        document.getElementsByClassName('PlayerContainer')[0].insertAdjacentHTML('afterbegin', '<div id="tempLayer"></div>');
     }
     // メニュー表示非表示
     function myEmtHeadClick(a) {
