@@ -357,6 +357,8 @@ javascript: (function(f, dd) {
             myCSSCmdChk(x[i]);
         }
 
+        document.getElementsByClassName('PlayerContainer')[0].after('<div id="tempLayer"></div>');
+
     }
     // メニュー表示非表示
     function myEmtHeadClick(a) {
@@ -3205,16 +3207,16 @@ javascript: (function(f, dd) {
     backup.onclick = function() {
         var saveElements = document.getElementById('myTrcSel2');
         localStorage.setItem('saveLayer', saveElements.innerHTML);
-        saveElements = document.getElementsByClassName('PlayerContainer')[0];
+        saveElements = document.getElementById('tempLayer');
         localStorage.setItem('saveTextarea', saveElements.innerHTML);
-    }
+    };
 
     restore.onclick = function() {
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
         loadElements = localStorage.getItem('saveTextarea');
-        document.getElementsByClassName('PlayerContainer')[0].innerHTML = loadElements;
-    }
+        document.document.getElementById('tempLayer').innerHTML = loadElements;
+    };
 
 
 
