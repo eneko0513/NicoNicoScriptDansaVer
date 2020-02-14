@@ -3202,26 +3202,36 @@ javascript: (function(f, dd) {
         }
     }
 
-    backup.onclick = function() {
+    backup.onclick = function () {
         var saveElements = document.getElementById('myTrcSel2');
         localStorage.setItem('saveLayer', saveElements.innerHTML);
         saveElements = document.getElementById('tempLayer');
         localStorage.setItem('saveTextarea', saveElements.innerHTML);
 
         // テキストのvalueは別で保存する(めんどくせ)
+        var jsonStr = [];
+        var tmp = {};
         for (let i = 0; i < saveElements.childNodes.length; i++) {
-            console.log('TEST');
+            tmp = {
+                id: saveElements.childNodes[i].id,
+                value: saveElements.childNodes[i].value
+            }
+            jsonStr.push(tmp);
         }
+        localStorage.setItem('layerValueList', JSON.stringify(jsonStr));
     };
 
-    restore.onclick = function() {
+    restore.onclick = function () {
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
         loadElements = localStorage.getItem('saveTextarea');
         document.getElementById('tempLayer').innerHTML = loadElements;
 
         // valueの復元
-
+        var restoreValueList = JSON.parse(localStorage.getItem('layerValueList'));
+        for (var i = 0; i < document.getElementById('myTrcSel2').childNodes.length; i++) {
+            document.getElementById('tempLayer').childNodes[i].value = restoreValueList[i].value;
+        }
     };
 
 
