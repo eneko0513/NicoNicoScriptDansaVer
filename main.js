@@ -3213,7 +3213,7 @@ javascript: (function(f, dd) {
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
         loadElements = localStorage.getItem('saveTextarea');
-        document.document.getElementById('tempLayer').innerHTML = loadElements;
+        document.getElementById('tempLayer').innerHTML = loadElements;
     };
 
 
