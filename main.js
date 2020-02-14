@@ -3204,8 +3204,12 @@ javascript: (function(f, dd) {
 
     backup.onclick = function() {
         var saveElements = document.getElementById('myTrcSel2');
+        localStorage.setItem('saveLayer', saveElements.innerHTML);
+    }
 
-        localStorage.setItem('saveLayer', saveElements);
+    restore.onclick = function() {
+        var loadElements = localStorage.getItem('saveLayer');
+        document.getElementById('myTrcSel2').innerHTML = loadElements;
     }
 
 
