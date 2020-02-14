@@ -3224,8 +3224,7 @@ javascript: (function(f, dd) {
 
     restore.onclick = function () {
         // 一度子要素を削除
-        var element = document.getElementById('tempLayer');
-        while (element.firstChild) element.removeChild(element.firstChild);
+        $('#tempLayer').empty();
 
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
