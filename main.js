@@ -3222,6 +3222,10 @@ javascript: (function(f, dd) {
     };
 
     restore.onclick = function () {
+        // 一度子要素を削除
+        var element = document.getElementById('tempLayer');
+        while (element.firstChild) element.removeChild(element.firstChild);
+
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
         loadElements = localStorage.getItem('saveTextarea');
