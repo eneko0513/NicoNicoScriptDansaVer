@@ -3223,9 +3223,6 @@ javascript: (function(f, dd) {
     };
 
     restore.onclick = function () {
-        // 一度子要素を削除
-        $('#tempLayer').empty();
-
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
         loadElements = localStorage.getItem('saveTextarea');
