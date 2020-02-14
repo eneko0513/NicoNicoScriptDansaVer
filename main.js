@@ -3205,11 +3205,15 @@ javascript: (function(f, dd) {
     backup.onclick = function() {
         var saveElements = document.getElementById('myTrcSel2');
         localStorage.setItem('saveLayer', saveElements.innerHTML);
+        saveElements = document.getElementsByClassName('PlayerContainer')[0];
+        localStorage.setItem('saveTextarea', saveElements.innerHTML);
     }
 
     restore.onclick = function() {
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
+        loadElements = localStorage.getItem('saveTextarea');
+        document.getElementsByClassName('PlayerContainer')[0].innerHTML = loadElements;
     }
 
 
