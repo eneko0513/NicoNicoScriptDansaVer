@@ -3203,9 +3203,9 @@ javascript: (function(f, dd) {
     }
 
     backup.onclick = function () {
-        var saveElements = document.getElementById('myTrcSel2');
-        localStorage.setItem('saveLayer', saveElements.innerHTML);
-        saveElements = document.getElementById('tempLayer');
+        var saveElementsLayer = document.getElementById('myTrcSel2');
+        localStorage.setItem('saveLayer', saveElementsLayer.innerHTML);
+        var saveElements = document.getElementById('tempLayer');
         localStorage.setItem('saveTextarea', saveElements.innerHTML);
 
         // テキストのvalueは別で保存する(めんどくせ)
@@ -3215,7 +3215,7 @@ javascript: (function(f, dd) {
             tmp = {
                 id: saveElements.childNodes[i].id,
                 value: saveElements.childNodes[i].value,
-                selected: saveElements.childNodes[i].selected
+                selected: saveElementsLayer.childNodes[i].selected
             }
             jsonStr.push(tmp);
         }
