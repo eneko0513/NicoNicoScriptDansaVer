@@ -1530,7 +1530,7 @@ javascript: (function(f, dd) {
     };
 
     /*----------------------------------------------------------------------------------------------------
-    痴漢モード
+    置換モード
     -------------myTrcRepMode---------------------------------------------------------------------------------------*/
     $('myTrcRepMode').onclick = function () {
         if (myRep === false) {
@@ -3235,6 +3235,7 @@ javascript: (function(f, dd) {
         var restoreValueList = JSON.parse(localStorage.getItem('layerValueList'));
         for (var i = 0; i < document.getElementById('myTrcSel2').childNodes.length; i++) {
             document.getElementById('tempLayer').childNodes[i].value = restoreValueList[i].value;
+            document.getElementById('tempLayer').childNodes[i].addEventListener("focus", myTxtSelect, false);
         }
     };
 
