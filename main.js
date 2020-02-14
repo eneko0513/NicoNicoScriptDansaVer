@@ -3207,6 +3207,11 @@ javascript: (function(f, dd) {
         localStorage.setItem('saveLayer', saveElements.innerHTML);
         saveElements = document.getElementById('tempLayer');
         localStorage.setItem('saveTextarea', saveElements.innerHTML);
+
+        // テキストのvalueは別で保存する(めんどくせ)
+        for (let i = 0; i < saveElements.childNodes.length; i++) {
+            console.log('TEST');
+        }
     };
 
     restore.onclick = function() {
@@ -3214,6 +3219,9 @@ javascript: (function(f, dd) {
         document.getElementById('myTrcSel2').innerHTML = loadElements;
         loadElements = localStorage.getItem('saveTextarea');
         document.getElementById('tempLayer').innerHTML = loadElements;
+
+        // valueの復元
+
     };
 
 
