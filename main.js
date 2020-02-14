@@ -1421,7 +1421,7 @@ javascript: (function(f, dd) {
             t.style.cssText = myinnerTxt;
             t.style.color = "#" + parseInt($('myTxtR').value).toString(16).replace(/^[0-9A-F]$/, "0$&") + parseInt($('myTxtG').value).toString(16).replace(/^[0-9A-F]$/, "0$&") + parseInt($('myTxtB').value).toString(16).replace(/^[0-9A-F]$/, "0$&");
             // document.getElementsByClassName('CommentRenderer')[0].before(t);
-            document.getElementsByClassName('ControllerBoxContainer')[0].before(t);
+            document.getElementById('tempLayer').before(t);
             t.addEventListener("focus", myTxtSelect, false);
             $('myTrcSel2').add((new Option(m + " " + $('myTrcSel').value + " ●")));
             $('myTrcSel2')[m - 1].style.color = "#" + parseInt($('myTxtR').value).toString(16).replace(/^[0-9A-F]$/, "0$&") + parseInt($('myTxtG').value).toString(16).replace(/^[0-9A-F]$/, "0$&") + parseInt($('myTxtB').value).toString(16).replace(/^[0-9A-F]$/, "0$&");
