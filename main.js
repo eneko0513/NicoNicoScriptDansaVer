@@ -214,6 +214,8 @@ javascript: (function(f, dd) {
             '<input id="myVideoSizeL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="大" />' +
             '<input id="backup" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="バックアップ" />' +
             '<input id="restore" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="リストア" />' +
+            '<select id="layerManager" class="myCmd">' +
+            '</select>' +
             '</div>' +
             '<div style="padding:2px 0;">' +
             '<select id="myTrcSel" class="myCmd">' +
@@ -3237,7 +3239,9 @@ javascript: (function(f, dd) {
         }
     };
 
-
+    function layerManager() {
+        console.log('TEST');
+    }
 
 /*************************************************
 ----
