@@ -3276,10 +3276,10 @@ javascript: (function(f, dd) {
             // localStorage.setItem(user + savePresetKey, $('#ul_selectlist_sUID').html());
             // リストになければ追加
             if (checkAlreadyList(savePresetKey)) {
-                $('[name=presetList]').append($('<option>').html(savePresetKey).val(user + savePresetKey));
+                $('#presetList').append($('<option>').html(savePresetKey).val(user + savePresetKey));
             }
             // 選択値を上で追加したものに設定
-            $('[name=presetList]').val(user + savePresetKey);
+            $('#presetList').val(user + savePresetKey);
             // keyリストを持つ
             localStorage.setItem("garoonPresetExtensionItemKeyUserList", JSON.stringify(generateList(true)));
         }
@@ -3294,8 +3294,8 @@ javascript: (function(f, dd) {
     function checkAlreadyList(savePresetKey) {
         // 重複チェック
         var addToList = true;
-        for (var i = 0; i < $('[name=presetList]').children('option').length; i++) {
-            if (savePresetKey === $('[name=presetList]').children('option').eq(i).val()) {
+        for (var i = 0; i < $('#presetList').children('option').length; i++) {
+            if (savePresetKey === $('#presetList').children('option').eq(i).val()) {
                 addToList = false;
                 break;
             }
