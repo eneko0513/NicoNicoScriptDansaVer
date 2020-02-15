@@ -2762,7 +2762,6 @@ javascript: (function(f, dd) {
                     }
                 }
             }
-    
             if (Siz == 'big') {
                 if(L == '9'){
                     t=0;
@@ -2786,7 +2785,6 @@ javascript: (function(f, dd) {
                     t=7;
                 }
             }
-    
             // テンプレを選択
             $('myTrcSel')[parseInt(t)].selected = true;
             $('myTrcAdd').onclick();
@@ -2803,7 +2801,6 @@ javascript: (function(f, dd) {
             // <br>で分割してリード行を調べてテンプレと比較
             // $("myTxt" + $('myTrcSel2').value.split(" ")[0]).value = a[i];
             var n = [];
-    
             // 文字を改行で分解
             var cc = a[i].split(/\<BR\>/gi)
             // 1文字ずつ調査
@@ -2859,7 +2856,6 @@ javascript: (function(f, dd) {
                                 break;
                     }
                 }
-    
                 // 終わった時点でp=0ならスルー
                 n[j] = {};
                 n[j].LINE = j;
@@ -2883,7 +2879,6 @@ javascript: (function(f, dd) {
             p = Math.floor((W*12-n[0].WIDTH)/2);
             // 右端のリード削除
             n[0].TEXT = n[0].TEXT.replace(/\s+$/g, "");
-        	
             // ID順ソート
             n.sort(function(x,y){
                 if(x.LINE > y.LINE) return 1;
@@ -2911,10 +2906,9 @@ javascript: (function(f, dd) {
                 $("myTxt" + $('myTrcSel2').value.split(" ")[0]).value += n[j].TEXT + '\n';
             }
             $("myTxt" + $('myTrcSel2').value.split(" ")[0]).value = $("myTxt" + $('myTrcSel2').value.split(" ")[0]).value.slice(0,-1);
-        	
         }
     }
-    
+
     ----------------------------------------------------------------------------------------------------*/
 
     /*----------------------------------------------------------------------------------------------------
@@ -3204,7 +3198,7 @@ javascript: (function(f, dd) {
         }
     }
 
-    /*
+    
     backup.onclick = function () {
         var saveElementsLayer = document.getElementById('myTrcSel2');
         localStorage.setItem('saveLayer', saveElementsLayer.innerHTML);
@@ -3224,8 +3218,7 @@ javascript: (function(f, dd) {
         }
         localStorage.setItem('layerValueList', JSON.stringify(jsonStr));
     };
-    */
-
+    
     restore.onclick = function () {
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
@@ -3241,6 +3234,7 @@ javascript: (function(f, dd) {
         }
     };
 
+    /*
     function saveLayer() {
         var saveElementsLayer = document.getElementById('myTrcSel2');
         localStorage.setItem('saveLayer', saveElementsLayer.innerHTML);
@@ -3302,7 +3296,7 @@ javascript: (function(f, dd) {
         }
         return addToList;
     }
-
+    */
 /*************************************************
 ----
 *************************************************/
