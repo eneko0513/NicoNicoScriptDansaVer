@@ -3265,7 +3265,7 @@ javascript: (function(f, dd) {
         console.log('TEST');
     }
 
-    presetList.onclick = function () {
+    backup.onclick = function () {
         console.log('TEST');
         // 保存処理
         // LocalStorageにデータを持つ
