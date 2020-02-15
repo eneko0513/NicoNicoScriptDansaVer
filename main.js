@@ -3204,6 +3204,7 @@ javascript: (function(f, dd) {
         }
     }
 
+    /*
     backup.onclick = function () {
         var saveElementsLayer = document.getElementById('myTrcSel2');
         localStorage.setItem('saveLayer', saveElementsLayer.innerHTML);
@@ -3223,6 +3224,7 @@ javascript: (function(f, dd) {
         }
         localStorage.setItem('layerValueList', JSON.stringify(jsonStr));
     };
+    */
 
     restore.onclick = function () {
         var loadElements = localStorage.getItem('saveLayer');
@@ -3239,8 +3241,66 @@ javascript: (function(f, dd) {
         }
     };
 
+    function saveLayer() {
+        var saveElementsLayer = document.getElementById('myTrcSel2');
+        localStorage.setItem('saveLayer', saveElementsLayer.innerHTML);
+        var saveElements = document.getElementById('tempLayer');
+        localStorage.setItem('saveTextarea', saveElements.innerHTML);
+
+        // テキストのvalueは別で保存する(めんどくせ)
+        var jsonStr = [];
+        var tmp = {};
+        for (let i = 0; i < saveElements.childNodes.length; i++) {
+            tmp = {
+                id: saveElements.childNodes[i].id,
+                value: saveElements.childNodes[i].value,
+                selected: saveElementsLayer.childNodes[i].selected
+            }
+            jsonStr.push(tmp);
+        }
+        localStorage.setItem('layerValueList', JSON.stringify(jsonStr));
+    }
+
     function layerManager() {
         console.log('TEST');
+    }
+
+    layerManager.onclick = function () {
+        console.log('TEST');
+        // 保存処理
+        // LocalStorageにデータを持つ
+        var savePresetKey = inputPresetName();
+        // キャンセルでなければ処理
+        if ((user + savePresetKey !== null) && (user + savePresetKey !== "")) {
+            saveLayer();
+            // localStorage.setItem(user + savePresetKey, $('#ul_selectlist_sUID').html());
+            // リストになければ追加
+            if (checkAlreadyList(user + savePresetKey)) {
+                $('[name=presetMTGUserSelect]').append($('<option>').html(savePresetKey).val(user + savePresetKey));
+            }
+            // 選択値を上で追加したものに設定
+            $('[name=presetMTGUserSelect]').val(user + savePresetKey);
+            // keyリストを持つ
+            localStorage.setItem("garoonPresetExtensionItemKeyUserList", JSON.stringify(generateList(true)));
+        }
+    }
+
+    function inputPresetName() {
+        var presetName = 'newPreset';
+        presetName = window.prompt('プリセットの名前を入力してください。\n重複がある場合は上書きされます。', '');
+        return presetName;
+    }
+
+    function checkAlreadyList(savePresetKey) {
+        // 重複チェック
+        var addToList = true;
+        for (var i = 0; i < $('[name=presetMTGUserSelect]').children('option').length; i++) {
+            if (savePresetKey === $('[name=presetMTGUserSelect]').children('option').eq(i).val()) {
+                addToList = false;
+                break;
+            }
+        }
+        return addToList;
     }
 
 /*************************************************
