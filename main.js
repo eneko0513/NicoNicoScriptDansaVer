@@ -214,7 +214,7 @@ javascript: (function(f, dd) {
             '<input id="myVideoSizeL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="大" />' +
             '<input id="backup" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="バックアップ" />' +
             '<input id="restore" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="リストア" />' +
-            '<select id="layerManager" name="presetList" class="myCmd">' +
+            '<select id="presetList" name="presetList" class="myCmd">' +
             '</select>' +
             '</div>' +
             '<div style="padding:2px 0;">' +
@@ -3265,7 +3265,7 @@ javascript: (function(f, dd) {
         console.log('TEST');
     }
 
-    backup.onclick = function () {
+    presetList.onclick = function () {
         console.log('TEST');
         // 保存処理
         // LocalStorageにデータを持つ
