@@ -214,7 +214,7 @@ javascript: (function(f, dd) {
             '<input id="myVideoSizeL" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="大" />' +
             '<input id="backup" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="バックアップ" />' +
             '<input id="restore" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="リストア" />' +
-            '<select id="layerManager" class="myCmd">' +
+            '<select id="layerManager" name="presetList" class="myCmd">' +
             '</select>' +
             '</div>' +
             '<div style="padding:2px 0;">' +
@@ -3265,21 +3265,21 @@ javascript: (function(f, dd) {
         console.log('TEST');
     }
 
-    layerManager.onclick = function () {
+    backup.onclick = function () {
         console.log('TEST');
         // 保存処理
         // LocalStorageにデータを持つ
         var savePresetKey = inputPresetName();
         // キャンセルでなければ処理
-        if ((user + savePresetKey !== null) && (user + savePresetKey !== "")) {
+        if ((savePresetKey !== null) && (savePresetKey !== "")) {
             saveLayer();
             // localStorage.setItem(user + savePresetKey, $('#ul_selectlist_sUID').html());
             // リストになければ追加
-            if (checkAlreadyList(user + savePresetKey)) {
-                $('[name=presetMTGUserSelect]').append($('<option>').html(savePresetKey).val(user + savePresetKey));
+            if (checkAlreadyList(savePresetKey)) {
+                $('[name=presetList]').append($('<option>').html(savePresetKey).val(user + savePresetKey));
             }
             // 選択値を上で追加したものに設定
-            $('[name=presetMTGUserSelect]').val(user + savePresetKey);
+            $('[name=presetList]').val(user + savePresetKey);
             // keyリストを持つ
             localStorage.setItem("garoonPresetExtensionItemKeyUserList", JSON.stringify(generateList(true)));
         }
@@ -3294,8 +3294,8 @@ javascript: (function(f, dd) {
     function checkAlreadyList(savePresetKey) {
         // 重複チェック
         var addToList = true;
-        for (var i = 0; i < $('[name=presetMTGUserSelect]').children('option').length; i++) {
-            if (savePresetKey === $('[name=presetMTGUserSelect]').children('option').eq(i).val()) {
+        for (var i = 0; i < $('[name=presetList]').children('option').length; i++) {
+            if (savePresetKey === $('[name=presetList]').children('option').eq(i).val()) {
                 addToList = false;
                 break;
             }
