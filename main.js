@@ -3200,7 +3200,8 @@ javascript: (function(f, dd) {
     }
 
     function presetLoad() {
-
+        var loadElements = localStorage.getItem(saveLayerNameList);
+        document.getElementById('presetList').innerHTML = loadElements;
     }
 
     backup.onclick = function () {
@@ -3242,26 +3243,25 @@ javascript: (function(f, dd) {
         if (checkAlreadyList(commentArtName)) {
             addSelectList(commentArtName);
         }
+
+        // selectリストの要素を保存
+        var saveElementsLayerNameList = document.getElementById('presetList');
+        localStorage.setItem('saveLayerNameList', saveElementsLayerNameList.innerHTML);
     };
 
     // selectBoxAddLayer
     function addSelectList(commentArtName) {
         var select = document.getElementById("presetList");
         var option = document.createElement("option");
-
-        // 重複があれば更新しない
         option.text = commentArtName;
         option.value = commentArtName;
         select.appendChild(option);
+        option.selected = option.value;
     }
 
     restore.onclick = function () {
         // selectedItemValue
         var selectedItemValue = document.getElementById("presetList").value;
-
-
-
-
         var loadElements = localStorage.getItem('saveLayer_' + selectedItemValue);
         document.getElementById('myTrcSel2').innerHTML = loadElements;
         loadElements = localStorage.getItem('saveTextarea_' + selectedItemValue);
