@@ -3211,7 +3211,13 @@ javascript: (function(f, dd) {
 
         var commentArtName = inputPresetName();
         if (!checkAlreadyList(commentArtName)) {
-            alert('重複のため上書き保存します');
+            var result = window.confirm('重複していますが保存してよろしいですか');
+            if (result) {
+                // console.log('OKがクリックされました');
+            }
+            else {
+                return;
+            }
         }
 
         var saveElementsLayer = document.getElementById('myTrcSel2');
@@ -3231,15 +3237,19 @@ javascript: (function(f, dd) {
             jsonStr.push(tmp);
         }
         localStorage.setItem('layerValueList_' + commentArtName, JSON.stringify(jsonStr));
-
-        // リストに追加
-        addSelectList(commentArtName);
+        // リスト更新
+        // 既に同じvalueがあれば更新しない
+        if (checkAlreadyList(commentArtName)) {
+            addSelectList(commentArtName);
+        }
     };
 
     // selectBoxAddLayer
     function addSelectList(commentArtName) {
         var select = document.getElementById("presetList");
         var option = document.createElement("option");
+
+        // 重複があれば更新しない
         option.text = commentArtName;
         option.value = commentArtName;
         select.appendChild(option);
