@@ -3213,10 +3213,7 @@ javascript: (function(f, dd) {
         var commentArtName = inputPresetName();
         if (!checkAlreadyList(commentArtName)) {
             var result = window.confirm('重複していますが保存してよろしいですか');
-            if (result) {
-                // console.log('OKがクリックされました');
-            }
-            else {
+            if (!result) {
                 return;
             }
         }
