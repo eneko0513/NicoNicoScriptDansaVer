@@ -1,4 +1,4 @@
-﻿// 20200204_v5
+﻿// 20200219_v5
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -3200,7 +3200,7 @@ javascript: (function(f, dd) {
     }
 
     function presetLoad() {
-        var loadElements = localStorage.getItem(saveLayerNameList);
+        var loadElements = localStorage.getItem("saveLayerNameList");
         document.getElementById('presetList').innerHTML = loadElements;
     }
 
