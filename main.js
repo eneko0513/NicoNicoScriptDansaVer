@@ -21,7 +21,8 @@ javascript: (function(f, dd) {
     var myTimer
     myOnload();
 
-
+    // presetLoad
+    presetLoad();
 
     /*----------------------------------------------------------------------------------------------------
     [起動]
@@ -3198,6 +3199,10 @@ javascript: (function(f, dd) {
         }
     }
 
+    function presetLoad() {
+
+    }
+
     backup.onclick = function () {
 
         if (document.getElementById('myTrcSel2').childNodes.length == 0) {
@@ -3205,14 +3210,14 @@ javascript: (function(f, dd) {
         }
 
         var commentArtName = inputPresetName();
-        if (checkAlreadyList(commentArtName)) {
-            return;
+        if (!checkAlreadyList(commentArtName)) {
+            alert('重複のため上書き保存します');
         }
 
         var saveElementsLayer = document.getElementById('myTrcSel2');
-        localStorage.setItem('saveLayer', saveElementsLayer.innerHTML);
+        localStorage.setItem('saveLayer_' + commentArtName, saveElementsLayer.innerHTML);
         var saveElements = document.getElementById('tempLayer');
-        localStorage.setItem('saveTextarea', saveElements.innerHTML);
+        localStorage.setItem('saveTextarea_' + commentArtName, saveElements.innerHTML);
 
         // テキストのvalueは別で保存する(めんどくせ)
         var jsonStr = [];
@@ -3225,8 +3230,20 @@ javascript: (function(f, dd) {
             }
             jsonStr.push(tmp);
         }
-        localStorage.setItem('layerValueList', JSON.stringify(jsonStr));
+        localStorage.setItem('layerValueList_' + commentArtName, JSON.stringify(jsonStr));
+
+        // リストに追加
+        addSelectList(commentArtName);
     };
+
+    // selectBoxAddLayer
+    function addSelectList(commentArtName) {
+        var select = document.getElementById("presetList");
+        var option = document.createElement("option");
+        option.text = commentArtName;
+        option.value = commentArtName;
+        select.appendChild(option);
+    }
 
     restore.onclick = function () {
         var loadElements = localStorage.getItem('saveLayer');
@@ -3252,8 +3269,8 @@ javascript: (function(f, dd) {
     function checkAlreadyList(savePresetKey) {
         // 重複チェック
         var addToList = true;
-        for (var i = 0; i < document.querySelector('#presetList').find('option').length; i++) {
-            if (savePresetKey === document.querySelector('#presetList').find('option').eq(i).val()) {
+        for (var i = 0; i < document.getElementById('presetList').childNodes.length; i++) {
+            if (savePresetKey === document.getElementById('presetList').childNodes[i].value) {
                 addToList = false;
                 break;
             }
