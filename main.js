@@ -3256,13 +3256,19 @@ javascript: (function(f, dd) {
     }
 
     restore.onclick = function () {
-        var loadElements = localStorage.getItem('saveLayer');
+        // selectedItemValue
+        var selectedItemValue = document.getElementById("presetList").value;
+
+
+
+
+        var loadElements = localStorage.getItem('saveLayer_' + selectedItemValue);
         document.getElementById('myTrcSel2').innerHTML = loadElements;
-        loadElements = localStorage.getItem('saveTextarea');
+        loadElements = localStorage.getItem('saveTextarea_' + selectedItemValue);
         document.getElementById('tempLayer').innerHTML = loadElements;
 
         // valueの復元
-        var restoreValueList = JSON.parse(localStorage.getItem('layerValueList'));
+        var restoreValueList = JSON.parse(localStorage.getItem('layerValueList_' + selectedItemValue));
         for (var i = 0; i < document.getElementById('myTrcSel2').childNodes.length; i++) {
             document.getElementById('tempLayer').childNodes[i].value = restoreValueList[i].value;
             document.getElementById('tempLayer').childNodes[i].addEventListener("focus", myTxtSelect, false);
