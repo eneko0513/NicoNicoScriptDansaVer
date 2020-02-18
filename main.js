@@ -11,7 +11,7 @@ javascript: (function(f, dd) {
     //const myCmtSet = document.getElementsByClassName('CommentInput-textarea')[0];
     //const myCmdSet = document.getElementsByClassName('CommentCommandInput')[0];
     //const myExtUrl = chrome.extension.getURL('');
-    // var $ = function (id){return (typeof id =='string')?document.getElementById(id):id;};
+    var $ = function (id){ return (typeof id =='string') ? document.getElementById(id) : id; };
     var myDrg = 'F';
     var mySldVal = '0';
     var myRep = false;
@@ -3252,8 +3252,8 @@ javascript: (function(f, dd) {
     function checkAlreadyList(savePresetKey) {
         // 重複チェック
         var addToList = true;
-        for (var i = 0; i < $('#presetList').find('option').length; i++) {
-            if (savePresetKey === $('#presetList').find('option').eq(i).val()) {
+        for (var i = 0; i < document.querySelector('#presetList').find('option').length; i++) {
+            if (savePresetKey === document.querySelector('#presetList').find('option').eq(i).val()) {
                 addToList = false;
                 break;
             }
