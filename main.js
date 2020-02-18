@@ -3198,8 +3198,17 @@ javascript: (function(f, dd) {
         }
     }
 
-    
     backup.onclick = function () {
+
+        if (document.getElementById('myTrcSel2').childNodes.length == 0) {
+            return;
+        }
+
+        var commentArtName = inputPresetName();
+        if (checkAlreadyList(commentArtName)) {
+            return;
+        }
+
         var saveElementsLayer = document.getElementById('myTrcSel2');
         localStorage.setItem('saveLayer', saveElementsLayer.innerHTML);
         var saveElements = document.getElementById('tempLayer');
@@ -3218,7 +3227,7 @@ javascript: (function(f, dd) {
         }
         localStorage.setItem('layerValueList', JSON.stringify(jsonStr));
     };
-    
+
     restore.onclick = function () {
         var loadElements = localStorage.getItem('saveLayer');
         document.getElementById('myTrcSel2').innerHTML = loadElements;
@@ -3233,6 +3242,24 @@ javascript: (function(f, dd) {
             document.getElementById('myTrcSel2').childNodes[i].selected = restoreValueList[i].selected;
         }
     };
+
+    function inputPresetName() {
+        var presetName = 'newPreset';
+        presetName = window.prompt('プリセットの名前を入力してください。\n重複がある場合は上書きされます。', '');
+        return presetName;
+    }
+
+    function checkAlreadyList(savePresetKey) {
+        // 重複チェック
+        var addToList = true;
+        for (var i = 0; i < document.querySelector('#presetList').children('option').length; i++) {
+            if (savePresetKey === document.querySelector('#presetList').children('option').eq(i).val()) {
+                addToList = false;
+                break;
+            }
+        }
+        return addToList;
+    }
 
     /*
     function saveLayer() {
