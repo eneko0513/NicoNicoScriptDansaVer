@@ -216,6 +216,7 @@ javascript: (function(f, dd) {
             '<input id="backup" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="バックアップ" />' +
             '<input id="restore" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="リストア" />' +
             '<select id="presetList" name="presetList" class="myCmd">' +
+            '<input id="deleteLayerList" class="ActionButton TagEnterEditingButton TagContainer-editButton" type="button" value="レイヤー削除" />' +
             '</select>' +
             '</div>' +
             '<div style="padding:2px 0;">' +
@@ -3257,6 +3258,10 @@ javascript: (function(f, dd) {
     }
 
     restore.onclick = function () {
+        var result = window.confirm('復元してよろしいですか');
+        if (!result) {
+            return;
+        }
         // selectedItemValue
         var selectedItemValue = document.getElementById("presetList").value;
         var loadElements = localStorage.getItem('saveLayer_' + selectedItemValue);
@@ -3289,6 +3294,17 @@ javascript: (function(f, dd) {
             }
         }
         return addToList;
+    }
+
+    deleteLayerList.onclick = function() {
+        var result = window.confirm('レイヤーを削除してよろしいですか');
+        if (!result) {
+            return;
+        }
+
+        localStorage.removeItem('saveLayer_' + document.getElementById("presetList").value);
+        localStorage.removeItem('saveTextarea_' + document.getElementById("presetList").value);
+        localStorage.removeItem('layerValueList_' + document.getElementById("presetList").value);
     }
 /*************************************************
 ----
