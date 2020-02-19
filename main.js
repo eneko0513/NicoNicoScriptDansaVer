@@ -1,4 +1,4 @@
-﻿// 20200219_v5
+﻿// 20200219_v1
 javascript: (function(f, dd) {
     dd = document.createElement("script");
     dd.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
@@ -3301,10 +3301,10 @@ javascript: (function(f, dd) {
         if (!result) {
             return;
         }
-
         localStorage.removeItem('saveLayer_' + document.getElementById("presetList").value);
         localStorage.removeItem('saveTextarea_' + document.getElementById("presetList").value);
         localStorage.removeItem('layerValueList_' + document.getElementById("presetList").value);
+        document.getElementById('presetList').remove(document.getElementById('presetList').selectedIndex);
     }
 /*************************************************
 ----
