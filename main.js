@@ -19,6 +19,7 @@ javascript: (function(f, dd) {
     var myLin = false;
     var myKey = false;
     var myTimer
+    var maxCount = 75;
     myOnload();
 
     // presetLoad
@@ -28,6 +29,12 @@ javascript: (function(f, dd) {
     [起動]
     ----------------------------------------------------------------------------------------------------*/
     function myOnload() {
+
+        // 投コメ編集画面だったら1024文字分割で対応する
+        if ((location.href).substr(-13) == "owner_comment"){
+            maxCount = 1024;
+        }
+
         // プレイヤーサイズチェック
         // console.log(document.body.className)
         // ニコニコ
@@ -685,7 +692,7 @@ javascript: (function(f, dd) {
         } else if (a === 1) {
             // 連続投下は危ないのでコメ禁モード使う
             // 投コメ来たら投コメモードで考える
-            // 初回即実行なので75停止時、クリア効かなくて暴走する
+            // 初回即実行なのでMaxCount停止時、クリア効かなくて暴走する
             clearInterval(myTimer);
             if ((location.href).substr(-13) == "owner_comment") {
                 // 投コメモード
@@ -767,7 +774,7 @@ javascript: (function(f, dd) {
 
         // if (76 <= a.length) {
         // 	clearInterval(myTimer);
-        // 	h.innerHTML = h.innerHTML.slice(0, 8) + '　　　　　info---' + '75文字を超えています(' + a.length + ')';
+        // 	h.innerHTML = h.innerHTML.slice(0, 8) + '　　　　　info---' + 'MaxCount文字を超えています(' + a.length + ')';
         // 	return;
         // } else {
         h.innerHTML = h.innerHTML.slice(0, 8) + '　　　　　info---' + '(' + a.length + ')';
@@ -2037,7 +2044,7 @@ javascript: (function(f, dd) {
             }
             zi = z.length;
             // この時点で突破してたら処理終了
-            if (75 < zi) {
+            if (MaxCount < zi) {
                 alert('突破しちゃいます。' + z.length);
                 return;
             }
@@ -2607,7 +2614,7 @@ javascript: (function(f, dd) {
                 }
                 zi = z.length;
                 // この時点で突破してたら処理終了
-                if (75 < zi) {
+                if (MaxCount < zi) {
                     alert('突破しちゃいます。' + z.length);
                     return;
                 }
