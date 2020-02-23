@@ -19,7 +19,7 @@ javascript: (function(f, dd) {
     var myLin = false;
     var myKey = false;
     var myTimer
-    var maxCount = 75;
+    var MaxCount = 75;
     myOnload();
 
     // presetLoad
