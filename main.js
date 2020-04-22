@@ -2084,7 +2084,8 @@ javascript: (function(f, dd) {
                     break;
                 }
             }
-            z = z.replace(/\uA001/g, '[A0]');
+            // todo: 2020-04-22 [A0]を[03](2003)出力に変更
+            z = z.replace(/\uA001/g, '[03]');
             z = z.replace(/\uA002/g, '<br>');
             z = z.replace(/\u0009/g, '[tb]');
             // z = z.replace(/\u200A/g,'[0A]');
@@ -2654,7 +2655,8 @@ javascript: (function(f, dd) {
                         break;
                     }
                 }
-                z = z.replace(/\uA001/g, '[A0]');
+                // todo: 2020-04-22 [A0]を[03](2003)に出力されるように変更
+                z = z.replace(/\uA001/g, '[03]');
                 z = z.replace(/\uA002/g, '<br>');
                 z = z.replace(/\u0009/g, '[tb]');
                 // z = z.replace(/\u200A/g,'[0A]');
