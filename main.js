@@ -32,7 +32,7 @@ javascript: (function(f, dd) {
 
         // 投コメ編集画面だったら1024文字分割で対応する
         if ((location.href).substr(-13) == "owner_comment"){
-            maxCount = 1024;
+            MaxCount = 1024;
         }
 
         // プレイヤーサイズチェック
